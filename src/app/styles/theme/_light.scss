@@ -1,0 +1,37 @@
+:root {
+  // text
+  --color-text-primary: #{$black};
+  --color-text-secondary: #{$grey-800};
+  --color-text-muted: #{$grey-700};
+
+  // background
+  --color-bg-primary: #{$white};
+  --color-bg-secondary: #{$grey-100};
+  --color-bg-tertiary: #{$grey-200};
+
+  // brand
+  --color-accent: #{$green-500};
+  --color-accent-hover: #{$green-600};
+
+  // borders
+  --color-border-default: #{$grey-500};
+  --color-border-light: #{$grey-150};
+  --color-border-strong: #{$black};
+
+  // states
+  --color-error: #{$error-400};
+
+  // elements
+  --color-button-primary: var(--color-accent);
+  --color-button-primary-hover: var(--color-accent-hover);
+
+  --color-input-focus: #{$green-500};
+  --color-label-hover: #{$grey-600};
+
+  // icons
+  --color-icon-default: #{$grey-700};
+
+  // navigation
+  --color-nav-burger: #{$light-black};
+  --color-nav-link-decor: #{$border-100};
+}
