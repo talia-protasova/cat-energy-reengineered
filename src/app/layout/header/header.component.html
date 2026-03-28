@@ -1,0 +1,42 @@
+<header
+  class="header"
+  [class.header--index]="headerVariant === 'index'"
+  [class.header--opened]="isMenuOpen"
+>
+  <div class="header__wrapper wrapper">
+    <a class="header__logo-pic-link" routerLink="/">
+      <picture>
+        <source
+          srcset="/assets/imgs/svg/logo-desktop.svg"
+          media="(min-width: 1440px)"
+        />
+        <img
+          class="header__logo"
+          src="/assets/imgs/svg/logo-mobile.svg"
+          width="191"
+          height="39"
+          alt="Cat Energy homepage"
+        />
+      </picture>
+    </a>
+    <button
+      class="header__nav-button"
+      type="button"
+      aria-label="Toggle menu"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-controls="main-navigation"
+      (click)="toggleMenu()"
+      [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'"
+      #menuButton
+    >
+      <span class="header__nav-burger"></span>
+    </button>
+
+    <app-theme-toggle></app-theme-toggle>
+    <app-navigation
+      [navigation]="navigation"
+      [isOpen]="isMenuOpen"
+      (linkClick)="closeMenu()"
+    ></app-navigation>
+  </div>
+</header>

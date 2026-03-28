@@ -1,0 +1,61 @@
+@use "tokens/colors" as *;
+
+[data-theme="dark"] {
+  // background
+  --color-bg-primary: #{$grey-900};
+  --color-bg-secondary: #{$grey-800};
+  --color-bg-tertiary: #{$grey-700};
+  --color-bg-accent: #{$white};
+
+  // text
+  --color-text-primary: #{$white};
+  --color-text-secondary: #{$grey-300};
+  --color-text-muted: #{$grey-500};
+  --color-text-inverse: #{$black};
+
+  // borders
+  --color-border-default: #{$grey-700};
+  --color-border-light: #{$grey-800};
+  --color-border-strong: #{$grey-300};
+
+  // brand
+  --color-accent: #{$green-500};
+  --color-accent-hover: #{$green-600};
+
+  // states
+  --color-error: #{$error-400};
+
+  // elements
+  --color-button-primary: var(--color-accent);
+  --color-button-primary-hover: var(--color-accent-hover);
+
+  // inputs
+  --color-input-focus: #{$green-500};
+
+  // icons
+  --color-icon-default: #{$grey-300};
+
+  // navigation
+  --header-nav-link-color: var(--color-text-primary);
+  --header-nav-link-color-inverse: var(--color-text-inverse);
+  --header-nav-link-decor-inverse: var(--color-bg-accent);
+  --color-nav-index-route-decor: #{$white};
+  --color-nav-burger: #{$white};
+  --color-nav-link-decor: #{$grey-600};
+
+  --header-nav-link-default-color: var(--color-text-primary);
+  --header-nav-link-decor-default: var(--color-accent);
+
+  // footer
+  --color-social-link: #{$white};
+  --color-social-links-decor: #{$grey-600};
+
+  // promo
+  --promo-title-color-mobile: var(--color-text-primary);
+  --promo-title-color-tablet: var(--color-text-primary);
+  --promo-desc-color-mobile: var(--color-text-primary);
+  --promo-desc-color-tablet: var(--color-text-primary);
+
+  --promo-overlay-color: #{$green-overlay};
+  --promo-surface-color: var(--color-bg-primary);
+}

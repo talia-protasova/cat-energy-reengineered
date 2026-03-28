@@ -1,0 +1,216 @@
+@use "abstracts/media" as *;
+@use "abstracts/images" as *;
+
+.footer {
+  position: relative;
+
+  background-color: var(--color-bg-secondary);
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    min-height: 34.375rem;
+  }
+}
+
+.footer__contacts {
+  background-color: var(--color-bg-secondary);
+  z-index: 1;
+
+  @include desktop {
+    background-color: transparent;
+  }
+}
+
+.footer__contacts-wrapper {
+  padding-block: 1.75rem 1.5rem;
+
+  @include tablet {
+    background-color: var(--color-bg-secondary);
+  }
+
+  @include desktop {
+    padding-block: 0;
+    padding-inline: 7rem;
+
+    background-color: transparent;
+  }
+}
+
+.footer__contacts-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    padding-block: 2rem;
+    padding-inline: 2.5rem;
+  }
+
+  @include desktop {
+    width: 35.625rem;
+
+    padding-block: 4rem 3.5rem;
+    padding-inline: 5rem;
+
+    margin-block-end: 7rem;
+
+    background-color: var(--color-bg-primary);
+    z-index: 2;
+  }
+}
+
+.footer__contacts-title {
+  font-family: var(--footer-contacts-title-font-family);
+  font-weight: var(--footer-contacts-title-font-weight);
+  font-size: var(--footer-contacts-title-font-size-mobile);
+  line-height: var(--footer-contacts-title-line-height-mobile);
+  text-transform: uppercase;
+
+  @include tablet {
+    width: 30%;
+
+    font-size: var(--footer-contacts-title-font-size-tablet);
+    line-height: var(--footer-contacts-title-line-height-tablet);
+  }
+
+  @include desktop {
+    width: 40%;
+  }
+}
+
+.footer__contacts-address {
+  margin-inline-start: 1.125rem;
+
+  color: var(--color-text-secondary);
+
+  font-family: var(--footer-text-font-family);
+  font-weight: var(--footer-text-font-weight);
+  font-size: var(--footer-text-font-size-mobile);
+  line-height: var(--footer-text-line-height-mobile);
+  font-style: normal;
+
+  @include tablet {
+    width: 30%;
+    text-align: end;
+
+    font-size: var(--footer-text-font-size-tablet);
+    line-height: var(--footer-text-line-height-tablet);
+  }
+
+  @include desktop {
+    width: 40%;
+    text-align: start;
+  }
+}
+
+.footer__contacts-city {
+  @include tablet {
+    display: block;
+    margin-block-start: 1.25rem;
+  }
+}
+
+.footer__map {
+  width: 100%;
+  height: 22.5rem;
+
+  background-position: center;
+  background-size: cover;
+
+  @include responsive-bg("/assets/imgs/footer/map/mobile/bg-map-mobile", "png");
+
+  @include tablet {
+    height: 25rem;
+
+    @include responsive-bg(
+      "/assets/imgs/footer/map/tablet/bg-map-tablet",
+      "png"
+    );
+  }
+
+  @include desktop {
+    position: absolute;
+    inset-block-start: 0;
+
+    @include responsive-bg(
+      "/assets/imgs/footer/map/desktop/bg-map-desktop",
+      "png"
+    );
+  }
+}
+
+.footer__links {
+  display: grid;
+  justify-items: center;
+  row-gap: 2rem;
+
+  padding-block: 2.5rem;
+
+  @include tablet {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    padding-block: 3rem 3.5rem;
+  }
+}
+
+.footer__logo:hover .footer__logo-img {
+  opacity: 0.8;
+}
+
+.footer__logo:active .footer__logo-img {
+  opacity: 0.6;
+}
+.footer__logo:focus-visible .footer__logo-img {
+  opacity: 0.6;
+  outline: 2px solid var(--color-accent-hover);
+}
+
+.footer__developer-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--color-text-secondary);
+
+  @include tablet {
+    width: 10.1875rem;
+  }
+}
+
+.footer__developer-link:hover {
+  color: var(--color-accent);
+}
+
+.footer__developer-link:active {
+  color: var(--color-accent);
+  opacity: 0.3;
+}
+.footer__developer-link:active {
+  color: var(--color-accent);
+  opacity: 0.3;
+  outline: 2px solid var(--color-accent-hover);
+}
+
+.footer__developer-text {
+  font-family: var(--footer-text-font-family);
+  font-weight: var(--footer-text-font-weight);
+  font-size: var(--footer-text-font-size-mobile);
+  line-height: var(--footer-dev-link-line-height);
+
+  @include tablet {
+    font-size: var(--footer-text-font-size-tablet);
+    line-height: var(--footer-text-line-height-tablet);
+  }
+}
+
+.footer__developer-icon {
+  margin-inline-end: -0.375rem;
+  flex-shrink: 0;
+
+  fill: currentColor;
+}

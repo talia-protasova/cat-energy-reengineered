@@ -1,0 +1,133 @@
+@use "abstracts/media" as *;
+@use "tokens/motion" as *;
+
+.nav {
+  position: absolute;
+  z-index: 1;
+
+  inset-inline-start: 0;
+  inset-block-start: 4.125rem;
+
+  width: 100%;
+
+  @include tablet {
+    position: static;
+    margin-block-start: 0;
+  }
+}
+@include mobile-table {
+  .nav--closed {
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  .nav--closed a {
+    visibility: hidden;
+  }
+
+  .nav--opened {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+.nav__list {
+  width: 100%;
+
+  background-color: var(--color-bg-primary);
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    max-width: 27.5rem;
+    background-color: transparent;
+  }
+
+  @include desktop {
+    max-width: 40.625rem;
+  }
+}
+
+.nav__item {
+  border-block: 1px solid var(--color-nav-link-decor);
+
+  text-align: center;
+
+  @include tablet {
+    border: 0;
+  }
+}
+
+.nav__item:not(:last-of-type) {
+  @include tablet {
+    margin-inline-end: 2rem;
+  }
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+
+  padding-block: 1.25rem;
+
+  color: var(--nav-link-color);
+  font-family: var(--header-nav-link-font-family-mobile);
+  font-size: var(--header-nav-link-font-size-mobile);
+  line-height: var(--header-nav-link-line-height-mobile);
+  font-weight: var(--header-nav-link-font-weight-mobile);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: opacity 0.2s ease;
+
+  @include tablet {
+    padding-block-start: 1.5rem;
+    padding-block-end: 0;
+
+    font-family: var(--header-nav-link-font-family-tablet);
+    font-size: var(--header-nav-link-font-size-tablet);
+    line-height: var(--header-nav-link-line-height-tablet);
+    font-weight: var(--header-nav-link-font-weight-tablet);
+  }
+
+  @include desktop {
+    padding-block-start: 1.125rem;
+
+    font-family: var(--header-nav-link-font-family-desktop);
+    font-size: var(--header-nav-link-font-size-desktop);
+    line-height: var(--header-nav-link-line-height-desktop);
+    font-weight: var(--header-nav-link-font-weight-desktop);
+  }
+}
+
+@media (hover: hover) {
+  .nav__link:hover {
+    opacity: 0.6;
+  }
+}
+.nav__link[href]:active {
+  opacity: 0.3;
+}
+.nav__link:focus-visible {
+  outline: 2px solid var(--color-accent-hover);
+  outline-offset: 2px;
+}
+
+.nav__link--active::after {
+  @include tablet {
+    position: absolute;
+    content: "";
+
+    inline-size: 100%;
+    block-size: 0.125rem;
+
+    inset-inline-start: 0;
+    inset-block-end: -0.375rem;
+    background: var(--nav-link-underline);
+  }
+}

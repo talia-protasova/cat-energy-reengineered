@@ -1,0 +1,18 @@
+@use "tokens/breakpoints" as *;
+
+@mixin mobile-table {
+  @media (max-width: $desktops) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktops) {
+    @content;
+  }
+}

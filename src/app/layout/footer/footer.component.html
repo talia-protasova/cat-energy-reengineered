@@ -1,0 +1,47 @@
+<footer class="footer">
+  <div class="footer__contacts">
+    <div class="wrapper footer__contacts-wrapper">
+      <div class="footer__contacts-layout">
+        <h2 class="footer__contacts-title">Dealer partnerships welcome</h2>
+
+        <address class="footer__contacts-address">
+          19/8 Bolshaya Konyushennaya Street
+          <span class="footer__contacts-city">Saint Petersburg</span>
+        </address>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__map" id="map" aria-label="Map showing our location"></div>
+
+  <div class="footer__links wrapper">
+    <div class="footer__block footer__block--logo">
+      <a class="footer__logo footer__logo--footer" routerLink="/">
+        <img
+          src="/assets/imgs/svg/logo-footer.svg"
+          width="128"
+          height="24"
+          alt="Cat Energy homepage"
+          class="footer__logo-img"
+        />
+      </a>
+    </div>
+
+    <app-social-links [links]="socialLinks"></app-social-links>
+
+    <div class="footer__block footer__block--copyright">
+      <div class="footer__developer-link">
+        <span class="footer__developer-text">HTML Academy</span>
+
+        <svg
+          class="footer__svg footer__developer-icon"
+          viewBox="0 0 60 60"
+          width="40"
+          height="40"
+        >
+          <use xlink:href="/assets/imgs/sprite.svg#htmlacademy"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>

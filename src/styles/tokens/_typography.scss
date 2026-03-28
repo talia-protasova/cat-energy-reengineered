@@ -1,0 +1,83 @@
+:root {
+  // fonts
+  --main-font: "Oswald Regular", "Arial", sans-serif;
+  --main-bold-font: "Oswald Medium", "Arial", sans-serif;
+  --accent-font: "Arial", sans-serif;
+
+  // font font-weight
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+
+  /* header navigation typography */
+  --header-nav-link-font-family-mobile: var(--main-bold-font);
+  --header-nav-link-font-family-tablet: var(--main-font);
+  --header-nav-link-font-family-desktop: var(--main-font);
+
+  --header-nav-link-font-size-mobile: 20px;
+  --header-nav-link-line-height-mobile: 24px;
+
+  --header-nav-link-font-size-tablet: 18px;
+  --header-nav-link-line-height-tablet: 24px;
+
+  --header-nav-link-font-size-desktop: 20px;
+  --header-nav-link-line-height-desktop: 30px;
+
+  --header-nav-link-font-weight-mobile: var(--font-weight-normal);
+  --header-nav-link-font-weight-tablet: var(--font-weight-normal);
+  --header-nav-link-font-weight-desktop: var(--font-weight-normal);
+
+  /* footer typography */
+  // contacts title
+  --footer-contacts-title-font-family: var(--main-font);
+  --footer-contacts-title-font-weight: var(--font-weight-normal);
+
+  --footer-contacts-title-font-size-mobile: 16px;
+  --footer-contacts-title-line-height-mobile: 20px;
+
+  --footer-contacts-title-font-size-tablet: 20px;
+  --footer-contacts-title-line-height-tablet: 25px;
+
+  // address / developer text
+  --footer-text-font-family: var(--accent-font);
+  --footer-text-font-weight: var(--font-weight-normal);
+
+  --footer-text-font-size-mobile: 14px;
+  --footer-text-line-height-mobile: 18px;
+
+  --footer-text-font-size-tablet: 16px;
+  --footer-text-line-height-tablet: 20px;
+
+  // developer link
+  --footer-dev-link-line-height: 19px;
+
+  /* promo  typography*/
+  // promo title
+  --promo-title-font-family: var(--main-font);
+  --promo-title-font-weight: var(--font-weight-normal);
+
+  --promo-title-font-size-mobile: 36px;
+  --promo-title-line-height-mobile: 36px;
+
+  --promo-title-font-size-tablet: 60px;
+  --promo-title-line-height-tablet: 60px;
+
+  --promo-title-font-size-desktop: 60px;
+  --promo-title-line-height-desktop: 60px;
+
+  // promo description
+  --promo-desc-font-family: var(--main-font);
+  --promo-desc-font-weight: var(--font-weight-normal);
+  --promo-desc-text-transform: uppercase;
+
+  --promo-desc-font-size-mobile: 14px;
+  --promo-desc-line-height-mobile: 14px;
+
+  --promo-desc-font-size-tablet: 20px;
+  --promo-desc-line-height-tablet: 20px;
+
+  --promo-desc-font-size-desktop: 20px;
+  --promo-desc-line-height-desktop: 20px;
+
+  --promo-button-font-size-desktop: 20px;
+  --promo-desc-font-size-tablet: 14px;
+}

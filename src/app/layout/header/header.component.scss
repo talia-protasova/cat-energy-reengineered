@@ -1,0 +1,125 @@
+@use "abstracts/media" as *;
+@use "tokens/motion" as *;
+.header {
+  --nav-link-color: var(--color-text-primary);
+
+  @include desktop {
+    --nav-link-color: var(--color-text-primary);
+    --nav-link-underline: var(--color-accent);
+  }
+}
+
+.header--index {
+  --nav-link-color: var(--color-text-primary);
+
+  @include desktop {
+    --nav-link-color: var(--header-nav-link-color-inverse);
+    --nav-link-underline: var(--header-nav-link-decor-inverse);
+  }
+}
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-block-start: 0.75rem;
+  padding-block-end: 1rem;
+
+  @include tablet {
+    padding-block-start: 1.125rem;
+    padding-block-end: 0;
+  }
+
+  @include desktop {
+    padding-block-start: 3rem;
+  }
+}
+.header {
+  position: relative;
+}
+.header__nav-button {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+.header__nav-burger {
+  position: absolute;
+  display: block;
+  inline-size: 1.5rem;
+  block-size: 0.125rem;
+  inset-inline-end: 0;
+  background-color: var(--color-nav-burger);
+
+  &::before {
+    position: absolute;
+    content: "";
+    inline-size: 1.5rem;
+    block-size: 0.125rem;
+    inset-block-start: -0.5rem;
+    inset-inline-start: 0;
+    background-color: var(--color-nav-burger);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    inline-size: 1.5rem;
+    block-size: 0.125rem;
+    inset-block-end: -0.5rem;
+    inset-inline-start: 0;
+    background-color: var(--color-nav-burger);
+  }
+}
+
+.header.header--opened .header__nav-burger {
+  background-color: transparent;
+}
+.header.header--opened .header__nav-burger::before {
+  inset-inline-start: -0.3125rem;
+  transform: rotate(45deg) translate(0.5625rem, 0.125rem);
+}
+.header.header--opened .header__nav-burger::after {
+  inset-inline-start: -0.5625rem;
+  transform: rotate(-45deg) translate(0.75rem, 0);
+}
+
+.header__logo-pic-link {
+  display: block;
+  margin-inline-end: auto;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.header__logo-pic-link[href]:hover {
+  opacity: 0.8;
+}
+
+.header__logo-pic-link[href]:active {
+  opacity: 0.6;
+}
+.header__logo-pic-link[href]:active {
+  opacity: 0.6;
+  outline: 2px solid var(--color-accent-hover);
+}
+
+.header__logo {
+  @include tablet {
+    width: 10.875rem;
+    height: 3.1875rem;
+  }
+
+  @include desktop {
+    width: 12.625rem;
+    height: 3.6875rem;
+  }
+}

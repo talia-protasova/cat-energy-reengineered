@@ -1,0 +1,26 @@
+<nav
+  class="nav"
+  aria-label="Main navigation"
+  [ngClass]="{
+    'nav--opened': isOpen,
+    'nav--closed': !isOpen,
+  }"
+  id="main-navigation"
+  [attr.aria-hidden]="!isOpen"
+>
+  <ul class="nav__list">
+    <li class="nav__item" *ngFor="let item of navigation; trackBy: trackByPath">
+      <a
+        class="nav__link"
+        [routerLink]="item.path"
+        routerLinkActive="nav__link--active"
+        #rla="routerLinkActive"
+        [attr.aria-current]="rla.isActive ? 'page' : null"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="onLinkClick()"
+      >
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</nav>

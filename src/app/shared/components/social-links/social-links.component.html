@@ -1,0 +1,17 @@
+<ul class="social">
+  <li class="social__item" *ngFor="let link of links; trackBy: trackByType">
+    <a
+      class="social__link social__link--{{ link.type }}"
+      [href]="link.url"
+      [attr.aria-label]="getMeta(link.type).label"
+    >
+      <svg class="social__svg" width="24" height="24">
+        <use
+          [attr.xlink:href]="
+            '/assets/imgs/sprite.svg' + getMeta(link.type).icon
+          "
+        ></use>
+      </svg>
+    </a>
+  </li>
+</ul>

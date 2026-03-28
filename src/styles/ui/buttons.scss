@@ -1,0 +1,77 @@
+@use "abstracts/media" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-block: var(--space-3);
+  padding-inline: var(--space-6);
+
+  font-family: var(--main-font);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: none;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Sizes */
+
+.button--md {
+  padding-block: var(--space-3);
+  padding-inline: var(--space-6);
+}
+
+@include tablet {
+  .button--md {
+    padding-block: var(--space-4);
+    padding-inline: var(--space-8);
+  }
+}
+
+/* Variants */
+
+.button--primary {
+  background-color: var(--color-button-primary);
+  color: var(--color-text-inverse);
+}
+
+.button--primary:hover {
+  background-color: var(--color-button-primary-hover);
+}
+
+.button--primary:active {
+  opacity: 0.7;
+}
+
+/* secondary */
+
+.button--secondary {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-border-light);
+}
+
+.button--secondary:active {
+  opacity: 0.6;
+}
+
+/* States */
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}

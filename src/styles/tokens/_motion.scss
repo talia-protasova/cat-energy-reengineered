@@ -1,0 +1,29 @@
+@keyframes showAnimation {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  40% {
+    transform: scaleY(1.04);
+  }
+
+  60% {
+    transform: scaleY(0.98);
+  }
+
+  80% {
+    transform: scaleY(1.04);
+  }
+
+  100% {
+    transform: scaleY(0.98);
+  }
+
+  80% {
+    transform: scaleY(1.02);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
