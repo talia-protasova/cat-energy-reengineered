@@ -80,4 +80,37 @@
 
   --promo-button-font-size-desktop: 20px;
   --promo-desc-font-size-tablet: 14px;
+
+  /* categories */
+
+  --categories-title-font-family: var(--main-font);
+  --categories-title-font-weight: var(--font-weight-normal);
+
+  --categories-title-font-size-mobile: 1.5rem;
+  --categories-title-line-height-mobile: 1.625rem;
+
+  --categories-title-font-size-tablet: 2.25rem;
+  --categories-title-line-height-tablet: 2.25rem;
+
+  // description
+
+  --categories-desc-font-family: var(--accent-font);
+  --categories-desc-font-weight: var(--font-weight-normal);
+
+  --categories-desc-font-size-mobile: 0.875rem;
+  --categories-desc-line-height-mobile: 1.125rem;
+
+  --categories-desc-font-size-tablet: 1rem;
+  --categories-desc-line-height-tablet: 1.25rem;
+
+  // button
+
+  --categories-button-font-family: var(--main-font);
+  --categories-button-font-weight: var(--font-weight-normal);
+
+  --categories-button-font-size-mobile: 1rem;
+  --categories-button-line-height-mobile: 1rem;
+
+  --categories-button-font-size-tablet: 1.25rem;
+  --categories-button-line-height-tablet: 1;
 }
