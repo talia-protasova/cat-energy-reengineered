@@ -44,14 +44,14 @@
 
   @include desktop {
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-end: 0;
+    top: 0;
+    right: 0;
 
     display: block;
     content: "";
-    inline-size: 50%;
-    min-block-size: 302px;
-    block-size: 695px;
+    width: 50%;
+    min-height: 18.875rem;
+    height: 43.4375rem;
     z-index: -1;
 
     @include responsive-bg-with-overlay(
@@ -62,6 +62,8 @@
         var(--promo-overlay-color) 0
       )
     );
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -124,28 +126,16 @@
 }
 
 .promo__pic {
-  margin-block-start: var(--space-7);
-
-  @include tablet {
-    position: absolute;
-    inset-block-start: 312px;
-    inset-inline-end: var(--space-4);
-
-    max-inline-size: 100%;
-    height: auto;
-
-    z-index: -1;
-  }
+  margin: 3.125rem auto 0;
 
   @include desktop {
     position: absolute;
+    top: 55%;
+    left: 15%;
 
-    inset-block-start: 55%;
-    inset-inline-start: 32%;
-
-    max-inline-size: 100%;
-    height: auto;
-    max-inline-size: none;
+    width: 34.5rem;
+    height: 31.1875rem;
+    max-width: none;
 
     transform: translate(50%, -50%);
   }
