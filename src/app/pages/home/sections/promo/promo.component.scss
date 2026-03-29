@@ -4,7 +4,7 @@
 .promo {
   padding-block-start: var(--space-7);
 
-  min-block-size: 460px;
+  min-block-size: 28.75rem;
   text-align: center;
 
   background-size:
@@ -27,7 +27,7 @@
   );
 
   @include tablet {
-    min-block-size: 843px;
+    min-block-size: 42rem;
     background-image: none;
     background-color: transparent;
 
@@ -35,7 +35,7 @@
   }
 
   @include desktop {
-    min-block-size: 675px;
+    min-block-size: 42.18rem;
   }
 }
 
@@ -71,11 +71,13 @@
   @include tablet {
     padding-block: var(--space-4);
     padding-inline: var(--space-9) var(--space-11);
+
+    max-inline-size: 70%;
   }
 
   @include desktop {
     position: relative;
-    max-inline-size: 530px;
+    max-inline-size: 33.125rem;
 
     padding-block: var(--space-12);
     padding-inline: var(--space-13) var(--space-5);
@@ -128,6 +130,15 @@
 .promo__pic {
   margin: 3.125rem auto 0;
 
+  @include tablet {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    z-index: -1;
+    inset-block-start: 9.5rem;
+    inset-inline-end: 1.875rem;
+  }
+
   @include desktop {
     position: absolute;
     top: 55%;
@@ -150,7 +161,7 @@
   @include tablet {
     margin-block-start: var(--space-10);
 
-    inline-size: 244px;
+    inline-size: 15.25rem;
   }
 
   @include desktop {

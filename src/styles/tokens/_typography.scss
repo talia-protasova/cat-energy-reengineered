@@ -113,4 +113,26 @@
 
   --categories-button-font-size-tablet: 1.25rem;
   --categories-button-line-height-tablet: 1;
+
+  /* process */
+
+  --process-title-font-family: var(--main-font);
+  --process-title-font-weight: var(--font-weight-normal);
+
+  --process-title-font-size-mobile: 2.25rem;
+  --process-title-line-height-mobile: 2.5rem;
+
+  --process-title-font-size-tablet: 3.75rem;
+  --process-title-line-height-tablet: 3.75rem;
+
+  // process text
+
+  --process-text-font-family: var(--accent-font);
+  --process-text-font-weight: var(--font-weight-normal);
+
+  --process-text-font-size-mobile: 0.875rem;
+  --process-text-line-height-mobile: 1.125rem;
+
+  --process-text-font-size-tablet: 1rem;
+  --process-text-line-height-tablet: 1.25rem;
 }

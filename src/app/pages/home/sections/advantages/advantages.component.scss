@@ -1,0 +1,176 @@
+@use "abstracts/media" as *;
+
+.process {
+  margin-block-start: var(--space-2);
+  padding-block-end: var(--space-10);
+
+  @include tablet {
+    margin-block-start: var(--space-4);
+    padding-block-end: var(--space-10);
+
+    border-block-end: 1px solid var(--color-border-light);
+  }
+
+  @include desktop {
+    margin-block-start: var(--space-11);
+    border-block-end: none;
+  }
+}
+
+.process__title {
+  margin-block-end: var(--space-9);
+
+  font-family: var(--process-title-font-family);
+  font-weight: var(--process-title-font-weight);
+  font-size: var(--process-title-font-size-mobile);
+  line-height: var(--process-title-line-height-mobile);
+
+  @include tablet {
+    margin-block-end: var(--space-8);
+
+    font-size: var(--process-title-font-size-tablet);
+    line-height: var(--process-title-line-height-tablet);
+  }
+
+  @include desktop {
+    margin-block-end: var(--space-9);
+  }
+}
+
+.process__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+
+  margin-block: 0;
+  margin-inline: auto;
+
+  max-width: 80%;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 16.25rem);
+    column-gap: var(--space-13);
+    row-gap: var(--space-10);
+
+    width: 100%;
+
+    counter-reset: process;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: var(--space-10);
+
+    width: 100%;
+  }
+}
+
+.process__item {
+  position: relative;
+  display: block;
+
+  margin-block-end: var(--space-1);
+
+  min-block-size: 3.75rem;
+
+  font-family: var(--process-text-font-family);
+  font-weight: var(--process-text-font-weight);
+  font-size: var(--process-text-font-size-mobile);
+  line-height: var(--process-text-line-height-mobile);
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-block-end: 0;
+
+    inline-size: 100%;
+    min-block-size: 15.625rem;
+
+    font-size: var(--process-text-font-size-tablet);
+    line-height: var(--process-text-line-height-tablet);
+
+    &::after {
+      position: absolute;
+
+      content: counter(process);
+      counter-increment: process;
+
+      inset-block-end: var(--space-4);
+      inset-inline-end: var(--space-2);
+
+      font-family: var(--main-font);
+      font-size: 17.5rem;
+      line-height: 1;
+
+      color: var(--color-bg-tertiary);
+
+      z-index: -1;
+    }
+  }
+
+  @include desktop {
+    &::after {
+      inset-inline-end: 0;
+    }
+  }
+}
+
+.process__item::before {
+  position: absolute;
+
+  content: "";
+
+  inline-size: 3.75rem;
+  block-size: 3.75rem;
+
+  inset-inline-start: 0;
+
+  background-color: var(--color-accent);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.875rem 2rem;
+
+  @include tablet {
+    inline-size: 5rem;
+    block-size: 5rem;
+
+    inset-block-start: var(--space-8);
+  }
+}
+
+.process__item--leaf::before {
+  background-image: url("/assets/imgs/advantages/advantage-leaf.svg");
+}
+
+.process__item--powder::before {
+  background-image: url("/assets/imgs/advantages/advantage-powder.svg");
+}
+
+.process__item--meals::before {
+  background-image: url("/assets/imgs/advantages/advantage-dining.svg");
+}
+
+.process__item--time::before {
+  background-image: url("/assets/imgs/advantages/advantage-clock.svg");
+}
+
+.process__text {
+  margin: 0;
+
+  padding-inline-start: var(--space-13);
+  padding-block-end: var(--space-2);
+
+  color: var(--color-text-secondary);
+  text-align: left;
+
+  @include tablet {
+    margin-block-start: auto;
+    padding-inline-start: 0;
+    padding-block-end: var(--space-8);
+
+    text-align: left;
+  }
+}
