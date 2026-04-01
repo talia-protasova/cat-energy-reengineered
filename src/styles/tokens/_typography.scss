@@ -135,4 +135,47 @@
 
   --process-text-font-size-tablet: 1rem;
   --process-text-line-height-tablet: 1.25rem;
+
+  /* example */
+  --example-title-font-family: var(--main-font);
+  --example-title-font-weight: var(--font-weight-normal);
+  --example-title-font-size-mobile: 2.25rem;
+  --example-title-line-height-mobile: 2.5rem;
+  --example-title-font-size-tablet: 3.75rem;
+  --example-title-line-height-tablet: 3.75rem;
+
+  --example-description-font-family: var(--accent-font);
+  --example-description-font-weight: var(--font-weight-normal);
+  --example-description-font-size-mobile: 0.875rem;
+  --example-description-line-height-mobile: 1.125rem;
+  --example-description-font-size-tablet: 1rem;
+  --example-description-line-height-tablet: 1.25rem;
+
+  --example-metric-value-font-family: var(--main-font);
+  --example-metric-value-font-weight: var(--font-weight-normal);
+  --example-metric-value-font-size-mobile: 1.5rem;
+  --example-metric-value-line-height-mobile: 1.5rem;
+  --example-metric-value-font-size-tablet: 1.875rem;
+  --example-metric-value-line-height-tablet: 2.3125rem;
+
+  --example-metric-label-font-family: var(--accent-font);
+  --example-metric-label-font-weight: var(--font-weight-normal);
+  --example-metric-label-font-size-mobile: 0.75rem;
+  --example-metric-label-line-height-mobile: 1rem;
+  --example-metric-label-font-size-tablet: 0.875rem;
+  --example-metric-label-line-height-tablet: 0.875rem;
+
+  --example-cost-font-family: var(--main-font);
+  --example-cost-font-weight: var(--font-weight-normal);
+  --example-cost-font-size-mobile: 0.75rem;
+  --example-cost-line-height-mobile: 1.25rem;
+  --example-cost-font-size-tablet: 1.25rem;
+  --example-cost-line-height-tablet: 1.25rem;
+
+  --example-slider-button-font-family: var(--main-font);
+  --example-slider-button-font-weight: var(--font-weight-normal);
+  --example-slider-button-font-size-mobile: 1rem;
+  --example-slider-button-line-height-mobile: 1.25rem;
+  --example-slider-button-font-size-tablet: 1.25rem;
+  --example-slider-button-line-height-tablet: 1.875rem;
 }

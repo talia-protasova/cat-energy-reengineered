@@ -1,0 +1,97 @@
+@use "abstracts/media" as *;
+
+.example {
+  margin-block-start: var(--space-9);
+  padding-block-end: var(--space-8);
+
+  background-color: var(--color-bg-secondary);
+
+  @include tablet {
+    padding-block-end: 0;
+
+    background: linear-gradient(
+      to bottom,
+      var(--color-bg-tertiary) 36.1875rem,
+      var(--color-bg-tertiary) 8.5625rem
+    );
+  }
+
+  @include desktop {
+    margin-block-start: var(--space-6);
+    min-block-size: 37.1875rem;
+
+    background-image:
+      linear-gradient(
+        to bottom,
+        var(--color-bg-primary) 8.125rem,
+        var(--color-bg-tertiary) 8.4375rem
+      ),
+      linear-gradient(
+        to right,
+        var(--color-bg-tertiary) 100%,
+        var(--color-bg-secondary) 40%
+      );
+  }
+}
+
+.example__wrapper {
+  padding-block-start: var(--space-6);
+
+  @include tablet {
+    padding-block-start: 0;
+  }
+}
+
+.example__container {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 27.25rem 1fr;
+    column-gap: 8.375rem;
+  }
+}
+
+.example__content {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-block-end: var(--space-10);
+  }
+}
+
+.example__title {
+  margin-block-end: var(--space-8);
+
+  font-family: var(--example-title-font-family);
+  font-weight: var(--example-title-font-weight);
+  font-size: var(--example-title-font-size-mobile);
+  line-height: var(--example-title-line-height-mobile);
+
+  @include tablet {
+    margin-block-end: var(--space-12);
+
+    font-size: var(--example-title-font-size-tablet);
+    line-height: var(--example-title-line-height-tablet);
+  }
+
+  @include desktop {
+    margin-block-end: 9.125rem;
+  }
+}
+
+.example__models {
+  display: block;
+
+  margin: 0;
+  padding-block-end: var(--space-3);
+
+  @include tablet {
+    margin-block-start: var(--space-14);
+  }
+
+  @include desktop {
+    margin-block-start: -13.75rem;
+  }
+}

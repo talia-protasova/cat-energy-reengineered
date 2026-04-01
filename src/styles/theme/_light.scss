@@ -47,6 +47,7 @@
   // footer
   --color-social-link: #{$grey-800};
   --color-social-links-decor: #{$border-100};
+  --footer-bg: var(--color-bg-primary);
 
   // promo
   --promo-title-color-mobile: var(--color-text-inverse);
@@ -56,4 +57,17 @@
 
   --promo-overlay-color: #{$green-overlay};
   --promo-surface-color: var(--color-bg-primary);
+
+  // slider
+
+  --slider-track-bg: var(--color-bg-tertiary);
+  --slider-track-bg-strong: var(--color-border-default);
+  --slider-track-border: var(--color-border-default);
+
+  --slider-thumb-bg: var(--color-accent);
+  --slider-thumb-border: var(--color-bg-primary);
+
+  --slider-button-border: var(--color-border-default);
+
+  --slider-focus: var(--color-input-focus);
 }
