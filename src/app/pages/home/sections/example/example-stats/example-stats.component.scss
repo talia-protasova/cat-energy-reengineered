@@ -1,0 +1,209 @@
+@use "abstracts/media" as *;
+
+.example-stats__description {
+  color: var(--color-text-muted);
+  font-family: var(--example-description-font-family);
+  font-weight: var(--example-description-font-weight);
+  font-size: var(--example-description-font-size-mobile);
+  line-height: var(--example-description-line-height-mobile);
+
+  @include tablet {
+    padding-inline-end: var(--space-6);
+
+    font-size: var(--example-description-font-size-tablet);
+    line-height: var(--example-description-line-height-tablet);
+  }
+
+  @include desktop {
+    padding-inline-end: 0;
+  }
+}
+
+.example-stats__stats {
+  margin-block-start: var(--space-6);
+
+  text-align: center;
+
+  @include tablet {
+    display: flex;
+    align-items: flex-start;
+
+    inline-size: 100%;
+
+    margin-block-start: var(--space-11);
+  }
+
+  @include desktop {
+    display: block;
+
+    margin-block-start: var(--space-12);
+  }
+}
+
+.example-stats__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin: 0;
+
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+}
+
+.example-stats__metric {
+  position: relative;
+
+  inline-size: 7.75rem;
+
+  margin: 0;
+  padding-block: var(--space-3);
+  padding-inline: var(--space-4);
+
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-xs);
+
+  @include tablet {
+    inline-size: 10.125rem;
+
+    padding-block-end: var(--space-2);
+  }
+
+  @include desktop {
+    padding-block-start: var(--space-3);
+  }
+}
+
+.example-stats__metric + .example-stats__metric {
+  margin-inline-start: auto;
+
+  @include tablet {
+    margin-inline-start: var(--space-9);
+  }
+}
+
+.example-stats__value {
+  display: block;
+
+  margin: 0;
+  margin-block-end: var(--space-2);
+
+  font-family: var(--example-metric-value-font-family);
+  font-weight: var(--example-metric-value-font-weight);
+  font-size: var(--example-metric-value-font-size-mobile);
+  line-height: var(--example-metric-value-line-height-mobile);
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-block-end: var(--space-2);
+    font-size: var(--example-metric-value-font-size-tablet);
+    line-height: var(--example-metric-value-line-height-tablet);
+  }
+
+  @include desktop {
+    margin-block-end: var(--space-2);
+  }
+}
+
+.example-stats__label {
+  position: absolute;
+  inline-size: 5.25rem;
+
+  margin: 0;
+
+  inset-inline-start: 50%;
+  inset-block-end: -var(--space-1);
+  background-color: var(--color-bg-secondary);
+
+  color: var(--color-text-muted);
+  text-align: center;
+  font-family: var(--example-metric-label-font-family);
+  font-weight: var(--example-metric-label-font-weight);
+  font-size: var(--example-metric-label-font-size-mobile);
+  line-height: var(--example-metric-label-line-height-mobile);
+
+  transform: translate(-50%, 50%);
+
+  @include tablet {
+    inline-size: 8.125rem;
+
+    inset-block-end: 0;
+    margin-inline: auto;
+
+    background-color: var(--color-bg-tertiary);
+
+    font-size: var(--example-metric-label-font-size-tablet);
+    line-height: var(--example-metric-label-line-height-tablet);
+  }
+
+  @include desktop {
+    background-color: var(--color-bg-tertiary);
+  }
+}
+
+.example-stats__cost {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  margin-block-start: var(--space-8);
+  margin-block-end: 0;
+
+  text-transform: uppercase;
+  font-family: var(--example-cost-font-family);
+  font-weight: var(--example-cost-font-weight);
+  font-size: var(--example-cost-font-size-mobile);
+  line-height: var(--example-cost-line-height-mobile);
+
+  @include tablet {
+    flex-direction: column;
+
+    inline-size: 15.625rem;
+    max-inline-size: 15.625rem;
+
+    margin-block-start: 0;
+    margin-inline-start: auto;
+
+    text-align: end;
+    font-size: var(--example-cost-font-size-tablet);
+    line-height: var(--example-cost-line-height-tablet);
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+    inline-size: 100%;
+    max-inline-size: 100%;
+
+    margin-block-start: var(--space-12);
+    margin-inline-start: 0;
+
+    text-align: start;
+  }
+}
+
+.example-stats__cost-title {
+  order: -1;
+
+  @include tablet {
+    inline-size: 100%;
+
+    margin-block-end: var(--space-2);
+  }
+
+  @include desktop {
+    margin-block-end: 0;
+  }
+}
+
+.example-stats__cost-value {
+  @include tablet {
+    inline-size: 100%;
+  }
+
+  @include desktop {
+    inline-size: 85%;
+  }
+}

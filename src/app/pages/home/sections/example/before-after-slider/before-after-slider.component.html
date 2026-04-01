@@ -1,0 +1,110 @@
+<figure class="before-after-slider models">
+  <div class="models__images" [style.--slider-value]="sliderPercent()">
+    <div class="models__before">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="
+            /assets/imgs/models/desktop/before-desktop@1x.webp 1x,
+            /assets/imgs/models/desktop/before-desktop@2x.webp 2x
+          "
+        />
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="
+            /assets/imgs/models/tablet/before-tablet@1x.webp 1x,
+            /assets/imgs/models/tablet/before-tablet@2x.webp 2x
+          "
+        />
+        <source
+          type="image/webp"
+          srcset="
+            /assets/imgs/models/mobile/before-mobile@1x.webp 1x,
+            /assets/imgs/models/mobile/before-mobile@2x.webp 2x
+          "
+        />
+        <img
+          src="/assets/imgs/models/mobile/before-mobile@1x.png"
+          class="models__img"
+          alt="Cat before the Cat Slim Program"
+        />
+      </picture>
+    </div>
+
+    <div class="models__after">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="
+            /assets/imgs/models/desktop/after-desktop@1x.webp 1x,
+            /assets/imgs/models/desktop/after-desktop@2x.webp 2x
+          "
+        />
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="
+            /assets/imgs/models/tablet/after-tablet@1x.webp 1x,
+            /assets/imgs/models/tablet/after-tablet@2x.webp 2x
+          "
+        />
+        <source
+          type="image/webp"
+          srcset="
+            /assets/imgs/models/mobile/after-mobile@1x.webp 1x,
+            /assets/imgs/models/mobile/after-mobile@2x.webp 2x
+          "
+        />
+        <img
+          src="/assets/imgs/models/mobile/after-mobile@1x.png"
+          class="models__img"
+          alt="Cat after the Cat Slim Program"
+        />
+      </picture>
+    </div>
+  </div>
+
+  <figcaption class="visually-hidden">Cat Before & After Comparison</figcaption>
+
+  <div class="before-after-slider__controls slider">
+    <div class="slider__button-wrapper">
+      <button
+        type="button"
+        class="slider__button slider__button--before"
+        (click)="setBefore()"
+      >
+        Before
+      </button>
+
+      <div class="slider__range">
+        <label class="slider__label">
+          <span class="visually-hidden">
+            Cat’s condition before and after the nutrition program
+          </span>
+
+          <input
+            type="range"
+            class="slider__input"
+            min="0"
+            max="100"
+            [value]="value()"
+            (input)="onSliderChange($event)"
+            (keydown)="onKeyDown($event)"
+            aria-label="Before & After Slider"
+          />
+        </label>
+      </div>
+
+      <button
+        type="button"
+        class="slider__button slider__button--after"
+        (click)="setAfter()"
+      >
+        After
+      </button>
+    </div>
+  </div>
+</figure>

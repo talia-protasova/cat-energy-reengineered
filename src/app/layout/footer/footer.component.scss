@@ -17,7 +17,7 @@
 }
 
 .footer__contacts {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--footer-bg);
   z-index: 1;
 
   @include desktop {
@@ -29,7 +29,7 @@
   padding-block: 1.75rem 1.5rem;
 
   @include tablet {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--footer-bg);
   }
 
   @include desktop {

@@ -30,6 +30,10 @@
   transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
+
+  @include desktop {
+    pointer-events: all;
+  }
 }
 
 .nav--opened {
