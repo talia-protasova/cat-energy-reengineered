@@ -1,0 +1,127 @@
+@use "abstracts/media" as *;
+
+:host {
+  height: 82%;
+  align-self: end;
+  width: 100%;
+}
+
+.add-more-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 100%;
+
+  padding: var(--space-4);
+
+  @include tablet {
+    border: 2px solid var(--color-add-more-item-border);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: var(--color-product-card-border);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &::before {
+    inset-block-start: 0;
+  }
+
+  &::after {
+    inset-block-end: 0;
+  }
+}
+
+.add-more-item__title {
+  margin-block-start: var(--space-13);
+  margin-block-end: var(--space-2);
+
+  text-align: center;
+  font-family: var(--add-more-item-title-font-font-family);
+  line-height: var(--add-more-item-title-line-height);
+  font-size: var(--add-more-item-title-font-size-mobile);
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+
+    inset-block-start: var(--space-6);
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("/assets/imgs/svg/icon-plus.svg");
+    background-repeat: no-repeat;
+
+    filter: var(--add-more-icon-filter);
+
+    @include tablet {
+      inset-block-start: var(--space-6);
+
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @include desktop {
+      inset-block-start: var(--space-11);
+    }
+  }
+
+  @include tablet {
+    margin-block-start: auto;
+    margin-block-end: var(--space-5);
+
+    max-inline-size: 8.375rem;
+  }
+
+  @include desktop {
+    margin-block-start: auto;
+    margin-block-end: var(--space-5);
+  }
+}
+
+.add-more-item__description {
+  margin-block-end: var(--space-5);
+
+  text-align: center;
+
+  font-family: var(--add-more-item-description-font-family);
+  font-size: var(--add-more-item-description-font-size);
+  line-height: var(--add-more-item-description-line-height);
+
+  color: var(--color-text-secondary);
+
+  @include tablet {
+    max-inline-size: 12.5rem;
+    margin-block-end: var(--space-13);
+  }
+
+  @include desktop {
+    margin-block-end: var(--space-13);
+  }
+}
+
+.add-more-item__button {
+  inline-size: 90%;
+  margin-inline: auto;
+
+  margin-block-start: var(--space-2);
+}

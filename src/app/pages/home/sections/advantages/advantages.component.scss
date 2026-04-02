@@ -48,7 +48,7 @@
   max-width: 80%;
 
   @include tablet {
-    grid-template-columns: repeat(2, 16.25rem);
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     column-gap: var(--space-13);
     row-gap: var(--space-10);
 
@@ -58,7 +58,6 @@
   }
 
   @include desktop {
-    grid-template-columns: repeat(4, 1fr);
     column-gap: var(--space-10);
 
     width: 100%;

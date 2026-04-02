@@ -31,7 +31,7 @@
   opacity: 0;
   pointer-events: none;
 
-  @include desktop {
+  @include tablet {
     pointer-events: all;
   }
 }

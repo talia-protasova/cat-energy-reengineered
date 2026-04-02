@@ -93,7 +93,6 @@
   --categories-title-line-height-tablet: 2.25rem;
 
   // description
-
   --categories-desc-font-family: var(--accent-font);
   --categories-desc-font-weight: var(--font-weight-normal);
 
@@ -104,7 +103,6 @@
   --categories-desc-line-height-tablet: 1.25rem;
 
   // button
-
   --categories-button-font-family: var(--main-font);
   --categories-button-font-weight: var(--font-weight-normal);
 
@@ -126,7 +124,6 @@
   --process-title-line-height-tablet: 3.75rem;
 
   // process text
-
   --process-text-font-family: var(--accent-font);
   --process-text-font-weight: var(--font-weight-normal);
 
@@ -178,4 +175,77 @@
   --example-slider-button-line-height-mobile: 1.25rem;
   --example-slider-button-font-size-tablet: 1.25rem;
   --example-slider-button-line-height-tablet: 1.875rem;
+
+  /* catalog */
+
+  --catalog-card-title-font-family: var(--main-font);
+  --catalog-card-title-font-weight: var(--font-weight-normal);
+
+  --catalog-card-title-font-size-mobile: 1rem;
+  --catalog-card-title-line-height-mobile: 1.25rem;
+
+  --catalog-card-title-font-size-tablet: 1.25rem;
+  --catalog-card-title-line-height-tablet: 1.5rem;
+
+  // table
+  --catalog-card-table-font-family: var(--accent-font);
+  --catalog-card-table-font-weight: var(--font-weight-normal);
+
+  --catalog-card-table-font-size-mobile: 0.75rem;
+  --catalog-card-table-line-height-mobile: 1rem;
+
+  --catalog-card-table-font-size-tablet: 1rem;
+  --catalog-card-table-line-height-tablet: 1.25rem;
+
+  // add more item
+  --add-more-item-description-font-family: var(--accent-font);
+  --add-more-item-title-font-font-family: var(--accent-font);
+  --add-more-item-title-font-size-mobile: 1rem;
+  --add-more-item-title-font-size: 1.25rem;
+  --add-more-item-title-line-height: 1.5rem;
+  --add-more-item-description-font-size-mobile: 0.75rem;
+  --add-more-item-description-font-size: 1rem;
+  --add-more-item-description-line-height: 1.125rem;
+
+  /* add more */
+
+  --add-more-title-font-family: var(--main-font);
+  --add-more-title-font-weight: var(--font-weight-normal);
+
+  --add-more-title-font-size-mobile: 1.5rem;
+  --add-more-title-line-height-mobile: 1.5rem;
+
+  --add-more-title-font-size-tablet: 2.25rem;
+  --add-more-title-line-height-tablet: 2.25rem;
+
+  // card title
+  --add-more-card-title-font-family: var(--main-font);
+  --add-more-card-title-font-weight: var(--font-weight-normal);
+
+  --add-more-card-title-font-size-mobile: 1rem;
+  --add-more-card-title-line-height-mobile: 1rem;
+
+  --add-more-card-title-font-size-tablet: 1.25rem;
+  --add-more-card-title-line-height-tablet: 1.5rem;
+
+  // meta (amount + price)
+  --add-more-card-text-font-family: var(--accent-font);
+  --add-more-card-text-font-weight: var(--font-weight-normal);
+
+  --add-more-card-text-font-size-mobile: 0.875rem;
+  --add-more-card-text-line-height-mobile: 1.125rem;
+
+  --add-more-card-text-font-size-tablet: 1rem;
+  --add-more-card-text-line-height-tablet: 1.25rem;
+
+  /* bonus banner */
+
+  --add-more-bonus-text-font-family: var(--accent-font);
+  --add-more-bonus-text-font-weight: var(--font-weight-normal);
+
+  --add-more-bonus-text-font-size-mobile: 1rem;
+  --add-more-bonus-text-line-height-mobile: 1.25rem;
+
+  --add-more-bonus-text-font-size-tablet: 1rem;
+  --add-more-bonus-text-line-height-tablet: 1.25rem;
 }

@@ -6,6 +6,7 @@
   --color-bg-secondary: #{$grey-800};
   --color-bg-tertiary: #{$grey-700};
   --color-bg-accent: #{$white};
+  --color-text-white: #{$white};
 
   // text
   --color-text-primary: #{$white};
@@ -70,4 +71,18 @@
   --slider-button-border: var(--color-bg-accent);
 
   --slider-focus: var(--color-input-focus);
+
+  // catalog
+  --color-product-card-border: var(--color-border-default);
+  --color-product-catalog-border: #{$grey-600};
+  --color-product-card-gradient: linear-gradient(
+    to bottom,
+    var(--color-bg-primary) 87px,
+    var(--color-bg-secondary) 87px
+  );
+
+  --color-add-more-item-border: var(--color-border-light);
+
+  // add more item
+  --add-more-icon-filter: invert(1);
 }

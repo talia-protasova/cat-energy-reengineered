@@ -1,0 +1,109 @@
+<article class="product-card">
+  <div class="product-card__wrapper">
+    <a href="#" class="product-card__image-link">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1024px)"
+          [srcset]="
+            'assets/imgs/catalog/desktop/' +
+            product.image.base +
+            '-desktop@1x.webp, ' +
+            'assets/imgs/catalog/desktop/' +
+            product.image.base +
+            '-desktop@2x.webp 2x'
+          "
+        />
+
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          [srcset]="
+            'assets/imgs/catalog/tablet/' +
+            product.image.base +
+            '-tablet@1x.webp, ' +
+            'assets/imgs/catalog/tablet/' +
+            product.image.base +
+            '-tablet@2x.webp 2x'
+          "
+        />
+
+        <source
+          type="image/webp"
+          [srcset]="
+            'assets/imgs/catalog/mobile/' +
+            product.image.base +
+            '-mobile@1x.webp, ' +
+            'assets/imgs/catalog/mobile/' +
+            product.image.base +
+            '-mobile@2x.webp 2x'
+          "
+        />
+
+        <img
+          class="product-card__image"
+          [class.product-card__image--small]="product.size === 'small'"
+          [src]="
+            'assets/imgs/catalog/mobile/' +
+            product.image.base +
+            '-mobile@1x.png'
+          "
+          [srcset]="
+            'assets/imgs/catalog/mobile/' +
+            product.image.base +
+            '-mobile@2x.png 2x'
+          "
+          [alt]="product.image.alt"
+          width="68"
+          height="86"
+          loading="lazy"
+        />
+      </picture>
+    </a>
+
+    <div class="product-card__content">
+      <h3 class="product-card__title">
+        <a href="#" class="product-card__title-link">
+          {{ product.title }}
+        </a>
+      </h3>
+
+      <table class="product-card__table">
+        <caption class="visually-hidden">
+          Product details
+        </caption>
+
+        <tbody>
+          <tr class="product-card__row">
+            <th scope="row" class="product-card__label">Weight</th>
+            <td class="product-card__value">
+              {{ product.weight }}
+            </td>
+          </tr>
+
+          <tr class="product-card__row">
+            <th scope="row" class="product-card__label">Taste</th>
+            <td class="product-card__value">
+              {{ product.taste }}
+            </td>
+          </tr>
+
+          <tr class="product-card__row">
+            <th scope="row" class="product-card__label">Price</th>
+            <td class="product-card__value">
+              {{ product.price }}
+              <span class="product-card__currency">&#36;</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="product-card__button button button--primary button--md"
+  >
+    Order
+  </button>
+</article>

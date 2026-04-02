@@ -1,0 +1,126 @@
+@use "abstracts/media" as *;
+@use "abstracts/images" as *;
+
+:host {
+  height: 100%;
+  width: 100%;
+}
+
+.bonus-banner {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 18.125rem;
+
+  margin-block-start: var(--space-9);
+  margin-block-end: var(--space-8);
+  padding-block-start: var(--space-15);
+  padding-block-end: var(--space-7);
+  padding-inline: var(--space-12) var(--space-11);
+
+  background-color: var(--color-accent);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  color: var(--color-text-inverse);
+  text-align: center;
+
+  @include responsive-bg("/assets/imgs/bonus/mobile/gift-photo-mobile");
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    min-block-size: 12.5rem;
+
+    margin-block-start: var(--space-13);
+    margin-block-end: var(--space-13);
+
+    padding-block: var(--space-11) var(--space-10);
+    padding-inline: var(--space-11) var(--space-15);
+
+    @include responsive-bg("/assets/imgs/bonus/tablet/gift-photo-tablet");
+  }
+
+  @include desktop {
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-block-size: 18.0625rem;
+
+    margin-block: 0;
+    padding-block-start: 11.5rem;
+    padding-block-end: var(--space-11);
+    padding-inline: var(--space-9);
+
+    @include responsive-bg("/assets/imgs/bonus/desktop/gift-photo-desktop");
+  }
+}
+
+.bonus-banner::before {
+  position: absolute;
+  content: "";
+
+  inline-size: 4.875rem;
+  block-size: 5rem;
+
+  background-image: url("/assets/imgs/svg/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  inset-block-start: 3.6875rem;
+  inset-inline-start: 50%;
+
+  transform: translateX(-50%);
+
+  @include tablet {
+    inset-block-start: 50%;
+    inset-inline-start: var(--space-13);
+
+    transform: translateY(-50%);
+  }
+
+  @include desktop {
+    inset-block-start: var(--space-11);
+    inset-inline-start: 50%;
+
+    transform: translateX(-50%);
+  }
+}
+
+.bonus-banner__link {
+  display: block;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.bonus-banner__text {
+  margin: 0;
+
+  font-family: var(--add-more-bonus-text-font-family);
+  font-weight: var(--add-more-bonus-text-font-weight);
+  font-size: var(--add-more-bonus-text-font-size-mobile);
+  line-height: var(--add-more-bonus-text-line-height-mobile);
+  color: var(--color-text-white);
+
+  @include tablet {
+    max-inline-size: 10.0625rem;
+
+    text-align: start;
+    font-size: var(--add-more-bonus-text-font-size-tablet);
+    line-height: var(--add-more-bonus-text-line-height-tablet);
+  }
+
+  @include desktop {
+    text-align: center;
+  }
+}

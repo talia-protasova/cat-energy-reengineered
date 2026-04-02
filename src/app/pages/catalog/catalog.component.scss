@@ -1,0 +1,27 @@
+@use "abstracts/media" as *;
+
+.catalog {
+  border-block-start: 1px solid var(--color-product-catalog-border);
+
+  @include tablet {
+    border-block-start: none;
+  }
+}
+
+.catalog__main-title {
+  margin-block-start: var(--space-7);
+  margin-block-end: var(--space-9);
+
+  text-align: center;
+
+  @include tablet {
+    margin-block-start: var(--space-11);
+    margin-block-end: var(--space-13);
+
+    text-align: left;
+  }
+
+  @include desktop {
+    margin-block-start: var(--space-12);
+  }
+}
