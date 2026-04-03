@@ -1,0 +1,90 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-loader-overlay);
+  backdrop-filter: blur(0.125rem);
+}
+
+.loader {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  margin: 4.6875rem;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0.5rem dotted var(--color-accent);
+  transition: all 2s ease;
+  animation: dotted-spin 2s linear infinite;
+  border-bottom-width: 0.0625rem;
+  border-bottom-color: var(--color-accent-hover);
+  border-left-width: 0.125rem;
+  border-left-color: var(--color-accent-hover);
+  border-top-width: 0.1875rem;
+  border-right-width: 0.25rem;
+  border-top-color: var(--color-accent-hover);
+}
+
+.cat {
+  position: absolute;
+  top: 8rem;
+  left: 18rem;
+  width: 0;
+  height: 0;
+  border-right: 2rem solid transparent;
+  border-top: 2rem solid var(--color-accent-hover);
+  border-left: 2rem solid var(--color-accent-hover);
+  border-bottom: 2rem solid var(--color-accent-hover);
+  border-radius: 2rem;
+  transform: rotate(-80deg);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 2rem solid var(--color-accent-hover);
+  }
+
+  &::before {
+    top: -2.75rem;
+    left: -1.6875rem;
+    transform: rotate(87deg);
+  }
+
+  &::after {
+    top: -2rem;
+    left: -2.6875rem;
+    transform: rotate(42deg);
+  }
+}
+
+.cat__eye {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: var(--radius-full);
+  top: -1rem;
+  left: -1rem;
+  background: var(--color-bg-primary);
+  transform: skew(-28deg, 3deg);
+}
+
+@keyframes dotted-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

@@ -36,6 +36,9 @@
   // icons
   --color-icon-default: #{$grey-300};
 
+  // overlays
+  --color-loader-overlay: #{$loader-overlay-dark};
+
   // navigation
   --header-nav-link-color: var(--color-text-primary);
   --header-nav-link-color-inverse: var(--color-text-inverse);

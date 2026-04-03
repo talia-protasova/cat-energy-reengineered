@@ -248,4 +248,85 @@
 
   --add-more-bonus-text-font-size-tablet: 1rem;
   --add-more-bonus-text-line-height-tablet: 1.25rem;
+
+  /* ORDER */
+  //title
+  --order-title-font-family: var(--main-font);
+  --order-title-font-weight: var(--font-weight-normal);
+
+  --order-title-font-size-mobile: 2.25rem;
+  --order-title-line-height-mobile: 2.5rem;
+
+  --order-title-font-size-tablet: 3.75rem;
+  --order-title-line-height-tablet: 3.75rem;
+
+  // description
+  --order-desc-font-family: var(--main-font);
+  --order-desc-font-weight: var(--font-weight-normal);
+
+  --order-desc-font-size-mobile: 0.875rem;
+  --order-desc-line-height-mobile: 0.875rem;
+
+  --order-desc-font-size-tablet: 1.25rem;
+  --order-desc-line-height-tablet: 1.875rem;
+
+  //label
+  --order-label-font-family: var(--main-font);
+  --order-label-font-weight: var(--font-weight-normal);
+
+  --order-label-font-size-mobile: 1rem;
+  --order-label-line-height-mobile: 1rem;
+
+  --order-label-font-size-tablet: 1.25rem;
+  --order-label-line-height-tablet: 1.875rem;
+
+  //input
+  --order-input-font-family: var(--main-font);
+  --order-input-font-weight: var(--font-weight-normal);
+
+  --order-input-font-size-mobile: 1rem;
+  --order-input-line-height-mobile: 1rem;
+
+  --order-input-font-size-tablet: 1.25rem;
+  --order-input-line-height-tablet: 1.875rem;
+
+  // textarea
+  --order-textarea-font-family: var(--main-font);
+  --order-textarea-font-weight: var(--font-weight-normal);
+
+  --order-textarea-font-size-mobile: 0.875rem;
+  --order-textarea-line-height-mobile: 1.125rem;
+
+  --order-textarea-font-size-tablet: 1.25rem;
+  --order-textarea-line-height-tablet: 1.25rem;
+
+  // footnote
+  --order-footnote-font-family: var(--accent-font);
+  --order-footnote-font-weight: var(--font-weight-normal);
+
+  --order-footnote-font-size-mobile: 0.875rem;
+  --order-footnote-line-height-mobile: 1.125rem;
+
+  --order-footnote-font-size-tablet: 1rem;
+  --order-footnote-line-height-tablet: 1.25rem;
+
+  //fieldset title
+  --order-fieldset-title-font-family: var(--main-font);
+  --order-fieldset-title-font-weight: var(--font-weight-normal);
+
+  --order-fieldset-title-font-size-mobile: 1.5rem;
+  --order-fieldset-title-line-height-mobile: 1.625rem;
+
+  --order-fieldset-title-font-size-tablet: 2.25rem;
+  --order-fieldset-title-line-height-tablet: 2.25rem;
+
+  // button
+  --order-button-font-family: var(--main-font);
+  --order-button-font-weight: var(--font-weight-normal);
+
+  --order-button-font-size-mobile: 1rem;
+  --order-button-line-height-mobile: 1.25rem;
+
+  --order-button-font-size-tablet: 1.25rem;
+  --order-button-line-height-tablet: 1.25rem;
 }

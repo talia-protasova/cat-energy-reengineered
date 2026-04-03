@@ -6,7 +6,7 @@
   --color-text-secondary: #{$grey-800};
   --color-text-muted: #{$grey-700};
   --color-text-inverse: #{$white};
-  --color-text-white:  #{$white};
+  --color-text-white: #{$white};
 
   // background
   --color-bg-primary: #{$white};
@@ -34,6 +34,9 @@
 
   // icons
   --color-icon-default: #{$grey-700};
+
+  // overlays
+  --color-loader-overlay: #{$loader-overlay-light};
 
   // navigation
   --header-nav-link-color: var(--color-text-primary);
