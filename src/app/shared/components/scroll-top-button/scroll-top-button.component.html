@@ -1,0 +1,11 @@
+<button
+  *ngIf="isVisible$ | async"
+  class="scroll-top"
+  type="button"
+  aria-label="Scroll to top"
+  (click)="scrollToTop()"
+>
+  <svg width="32" height="12" class="scroll-top__icon">
+    <use href="/assets/imgs/sprite.svg#arr-right"></use>
+  </svg>
+</button>

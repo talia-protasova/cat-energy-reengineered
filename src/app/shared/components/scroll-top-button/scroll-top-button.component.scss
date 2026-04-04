@@ -1,0 +1,40 @@
+.scroll-top {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  margin: 0;
+  padding: var(--space-3);
+  inset-inline-end: var(--space-6);
+  inset-block-end: var(--space-6);
+
+  background: var(--color-button-scroll-to-top-bg);
+  border-radius: var(--radius-full);
+  box-shadow: var(--elevation-2);
+  z-index: 99;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    transform: translateY(-0.1525rem);
+  }
+
+  &:focus-visible {
+    outline: 0.1525rem solid var(--color-accent);
+    outline-offset: 0.1525rem;
+  }
+}
+
+.scroll-top__icon {
+  display: block;
+  fill: var(--color-accent);
+  transform: rotate(-90deg);
+}

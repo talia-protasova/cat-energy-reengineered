@@ -8,7 +8,6 @@ import {
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { LoaderComponent } from '../../shared/components/loader/loader.component';
 import { ProgramForm, PROGRAM_FORM_INITIAL_VALUES } from '../../core/models';
-
 @Component({
   selector: 'app-program-selection',
   imports: [ReactiveFormsModule, NgxMaskDirective, LoaderComponent],

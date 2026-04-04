@@ -118,6 +118,8 @@
 }
 
 .header__logo {
+  display: none;
+  fill: var(--color-text-primary);
   @include tablet {
     inline-size: 10.875rem;
     block-size: 3.1875rem;
@@ -126,5 +128,29 @@
   @include desktop {
     inline-size: 12.625rem;
     block-size: 3.6875rem;
+  }
+}
+
+.header__logo--mobile {
+  display: block;
+}
+
+@include tablet {
+  .header__logo--mobile {
+    display: none;
+  }
+
+  .header__logo--tablet {
+    display: block;
+  }
+}
+
+@include desktop {
+  .header__logo--tablet {
+    display: none;
+  }
+
+  .header__logo--desktop {
+    display: block;
   }
 }

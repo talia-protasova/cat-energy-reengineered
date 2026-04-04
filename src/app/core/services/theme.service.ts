@@ -6,9 +6,10 @@ type Theme = 'light' | 'dark';
 export class ThemeService {
   private theme = signal<Theme>('light');
 
+  public readonly current = this.theme.asReadonly();
+
   constructor() {
     const saved = localStorage.getItem('theme') as Theme | null;
-
     const system = window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light';
@@ -16,17 +17,13 @@ export class ThemeService {
     this.theme.set(saved ?? system);
 
     effect(() => {
-      const current = this.theme();
-      document.documentElement.setAttribute('data-theme', current);
-      localStorage.setItem('theme', current);
+      const val = this.theme();
+      document.documentElement.setAttribute('data-theme', val);
+      localStorage.setItem('theme', val);
     });
   }
 
   toggle() {
-    this.theme.set(this.theme() === 'light' ? 'dark' : 'light');
-  }
-
-  current() {
-    return this.theme();
+    this.theme.update((t) => (t === 'light' ? 'dark' : 'light'));
   }
 }

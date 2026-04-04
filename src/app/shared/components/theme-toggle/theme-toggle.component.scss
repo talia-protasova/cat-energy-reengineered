@@ -1,0 +1,79 @@
+@use "abstracts/media" as *;
+
+.theme-toggle {
+  position: absolute;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  inset-block-start: var(--space-1);
+  inset-inline-start: 50%;
+
+  border-radius: var(--radius-full);
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-default);
+
+  cursor: pointer;
+
+  transform: translateX(-50%);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+
+  @include desktop {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    inset-inline-start: auto;
+    inset-inline-end: var(--space-4);
+    inset-block-start: var(--space-4);
+
+    transform: none;
+  }
+}
+.theme-toggle__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sun {
+  fill: url(#sun-gradient);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.moon {
+  fill: url(#moon-gradient);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.mask {
+  fill: var(--color-bg-primary);
+
+  transform-box: fill-box;
+  transform-origin: center;
+
+  transform: translate(2.5rem, -2.5rem);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mask.is-dark {
+  transform: translate(1rem, -0.8125rem);
+}
+
+:host-context([data-theme="dark"]) {
+  .sun {
+    opacity: 0;
+  }
+
+  .moon {
+    opacity: 1;
+  }
+}

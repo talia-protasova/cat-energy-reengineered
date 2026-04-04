@@ -218,6 +218,7 @@
 
 .add-more-card__button {
   inline-size: 100%;
+  color: var(--color-text-button);
 
   @include desktop {
     max-inline-size: 15.3125rem;

@@ -5,19 +5,19 @@
 >
   <div class="header__wrapper wrapper">
     <a class="header__logo-pic-link" routerLink="/">
-      <picture>
-        <source
-          srcset="/assets/imgs/svg/logo-desktop.svg"
-          media="(min-width: 1440px)"
-        />
-        <img
-          class="header__logo"
-          src="/assets/imgs/svg/logo-mobile.svg"
-          width="191"
-          height="39"
-          alt="Cat Energy homepage"
-        />
-      </picture>
+      <svg class="header__logo header__logo--mobile">
+        <use href="/assets/imgs/sprite.svg#logo-mobile"></use>
+      </svg>
+
+      <svg class="header__logo header__logo--tablet">
+        <use href="/assets/imgs/sprite.svg#logo-tablet"></use>
+      </svg>
+
+      <svg class="header__logo header__logo--desktop">
+        <use href="/assets/imgs/sprite.svg#logo-desktop"></use>
+      </svg>
+
+      <span class="visually-hidden">Cat Energy homepage</span>
     </a>
     <button
       class="header__nav-button"

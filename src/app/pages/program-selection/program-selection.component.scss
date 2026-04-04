@@ -190,6 +190,7 @@
   inline-size: 100%;
   padding-block-start: var(--space-7);
   padding-inline-start: var(--space-6);
+  border: 1px solid var(--color-border-light);
 
   @include tablet {
     margin-block-start: var(--space-10);
@@ -207,37 +208,6 @@
     align-self: start;
 
     border: 1px solid var(--color-border-light);
-  }
-}
-
-.program__aim::before {
-  position: absolute;
-  content: "";
-
-  inline-size: 100vw;
-  block-size: 1px;
-
-  inset-inline-start: 0;
-  inset-block-start: 0;
-
-  background-color: var(--color-border-light);
-
-  @include tablet {
-    display: none;
-  }
-}
-
-.program__aim::after {
-  position: absolute;
-  content: "";
-
-  inline-size: 100vw;
-  block-size: 1px;
-
-  background-color: var(--color-border-light);
-
-  @include tablet {
-    display: none;
   }
 }
 
@@ -265,7 +235,7 @@
   inset-block-start: 50%;
 
   border: 1px solid var(--color-border-default);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
 
   transform: translateY(-50%);
 
@@ -288,7 +258,7 @@
   inset-block-start: 50%;
 
   background: var(--color-accent);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
 
   opacity: 0;
 
@@ -528,6 +498,7 @@
   font-weight: var(--order-button-font-weight);
   font-size: var(--order-button-font-size-mobile);
   line-height: var(--order-button-line-height-mobile);
+  color: var(--color-text-button);
 
   @include tablet {
     font-size: var(--order-button-font-size-tablet);
@@ -592,6 +563,7 @@
 }
 
 .program__success .button--primary {
+  color: var(--color-text-button);
   font-family: var(--order-button-font-family);
   font-weight: var(--order-button-font-weight);
   font-size: var(--order-button-font-size-mobile);

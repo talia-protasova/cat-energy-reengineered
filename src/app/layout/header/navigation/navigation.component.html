@@ -6,7 +6,8 @@
     'nav--closed': !isOpen,
   }"
   id="main-navigation"
-  [attr.aria-hidden]="!isOpen"
+  [attr.inert]="!isOpen && !isDesktop ? '' : null"
+  [attr.aria-hidden]="!isOpen && !isDesktop"
 >
   <ul class="nav__list">
     <li class="nav__item" *ngFor="let item of navigation; trackBy: trackByPath">

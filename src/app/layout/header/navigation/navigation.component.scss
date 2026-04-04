@@ -79,7 +79,7 @@
 
   display: block;
 
-  padding-block: 1.25rem;
+  padding-block: var(--space-5);
 
   color: var(--nav-link-color);
   text-decoration: none;
@@ -93,7 +93,7 @@
   transition: opacity var(--motion-fast);
 
   @include tablet {
-    padding-block: 1.5rem 0;
+    padding-block: var(--space-2) 0;
 
     font-family: var(--header-nav-link-font-family-tablet);
     font-size: var(--header-nav-link-font-size-tablet);
@@ -102,8 +102,6 @@
   }
 
   @include desktop {
-    padding-block-start: 1.125rem;
-
     font-family: var(--header-nav-link-font-family-desktop);
     font-size: var(--header-nav-link-font-size-desktop);
     line-height: var(--header-nav-link-line-height-desktop);
