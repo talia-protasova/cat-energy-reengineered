@@ -13,6 +13,8 @@ A re-engineering of a static HTML Academy training project into a modern Angular
 - **SCSS** - token-based design system, `data-theme` theming
 - **ngx-mask** - phone input formatting
 - **Angular Reactive Forms** - validation with accessibility hooks
+
+
  
 ---
 
