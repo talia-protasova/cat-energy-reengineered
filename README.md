@@ -8,11 +8,11 @@ A re-engineering of a static HTML Academy training project into a modern Angular
  
 ## Tech Stack
  
-- **Angular 19** — standalone components, lazy-loaded routes, signals
+- **Angular 19** - standalone components, lazy-loaded routes, signals
 - **TypeScript 5.7**
-- **SCSS** — token-based design system, `data-theme` theming
-- **ngx-mask** — phone input formatting
-- **Angular Reactive Forms** — validation with accessibility hooks
+- **SCSS** - token-based design system, `data-theme` theming
+- **ngx-mask** - phone input formatting
+- **Angular Reactive Forms** - validation with accessibility hooks
  
 ---
 
