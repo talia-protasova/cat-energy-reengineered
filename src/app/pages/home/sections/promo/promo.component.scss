@@ -1,5 +1,4 @@
 @use "abstracts/media" as *;
-@use "abstracts/images" as *;
 
 .promo {
   padding-block-start: var(--space-7);
@@ -17,14 +16,30 @@
 
   background-repeat: no-repeat, no-repeat;
 
-  @include responsive-bg-with-overlay(
-    "/assets/imgs/promo/mobile/index-background-mobile",
+  // fallback (overlay + jpg)
+  background-image:
     linear-gradient(
       to top,
       var(--promo-surface-color) 0,
       var(--promo-overlay-color) 0
-    )
-  );
+    ),
+    url("../../../../../assets/imgs/promo/mobile/index-background-mobile@1x.jpg");
+
+  // modern (overlay + webp)
+  @supports (background-image: image-set(url("") 1x)) {
+    background-image:
+      linear-gradient(
+        to top,
+        var(--promo-surface-color) 0,
+        var(--promo-overlay-color) 0
+      ),
+      image-set(
+        url("../../../../../assets/imgs/promo/mobile/index-background-mobile@1x.webp")
+          1x,
+        url("../../../../../assets/imgs/promo/mobile/index-background-mobile@2x.webp")
+          2x
+      );
+  }
 
   @include tablet {
     min-block-size: 42rem;
@@ -38,7 +53,6 @@
     min-block-size: 42.18rem;
   }
 }
-
 .promo::before {
   display: none;
 
@@ -54,16 +68,33 @@
     height: 43.4375rem;
     z-index: -1;
 
-    @include responsive-bg-with-overlay(
-      "/assets/imgs/promo/desktop/index-background-desktop",
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // fallback
+    background-image:
       linear-gradient(
         to top,
         var(--promo-surface-color) 0,
         var(--promo-overlay-color) 0
-      )
-    );
-    background-repeat: no-repeat;
-    background-size: cover;
+      ),
+      url("../../../../../assets/imgs/promo/desktop/index-background-desktop@1x.jpg");
+
+    // modern
+    @supports (background-image: image-set(url("") 1x)) {
+      background-image:
+        linear-gradient(
+          to top,
+          var(--promo-surface-color) 0,
+          var(--promo-overlay-color) 0
+        ),
+        image-set(
+          url("../../../../../assets/imgs/promo/desktop/index-background-desktop@1x.webp")
+            1x,
+          url("../../../../../assets/imgs/promo/desktop/index-background-desktop@2x.webp")
+            2x
+        );
+    }
   }
 }
 

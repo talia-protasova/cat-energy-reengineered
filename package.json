@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:pages": "ng build --configuration production --base-href /cat-energy-reengineered/",
-    "deploy": "ng deploy --base-href=/cat-energy-reengineered/"
+    "build:local": "ng build --configuration production --base-href ./",
+    "build:pages": "ng build --configuration production --base-href /cat-energy-reengineered/ --deploy-url /cat-energy-reengineered/",
+    "deploy": "ng deploy --base-href=/cat-energy-reengineered/ --deploy-url=/cat-energy-reengineered/"
   },
 
 

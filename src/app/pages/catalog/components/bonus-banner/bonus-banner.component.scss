@@ -1,5 +1,4 @@
 @use "abstracts/media" as *;
-@use "abstracts/images" as *;
 
 :host {
   height: 100%;
@@ -32,7 +31,18 @@
   color: var(--color-text-inverse);
   text-align: center;
 
-  @include responsive-bg("/assets/imgs/bonus/mobile/gift-photo-mobile");
+  // mobile fallback
+  background-image: url("../../../../../assets/imgs/bonus/mobile/gift-photo-mobile@1x.jpg");
+
+  // mobile modern
+  @supports (background-image: image-set(url("") 1x)) {
+    background-image: image-set(
+      url("../../../../../assets/imgs/bonus/mobile/gift-photo-mobile@1x.webp")
+        1x,
+      url("../../../../../assets/imgs/bonus/mobile/gift-photo-mobile@2x.webp")
+        2x
+    );
+  }
 
   @include tablet {
     display: flex;
@@ -47,7 +57,16 @@
     padding-block: var(--space-11) var(--space-10);
     padding-inline: var(--space-11) var(--space-15);
 
-    @include responsive-bg("/assets/imgs/bonus/tablet/gift-photo-tablet");
+    background-image: url("../../../../../assets/imgs/bonus/tablet/gift-photo-tablet@1x.jpg");
+
+    @supports (background-image: image-set(url("") 1x)) {
+      background-image: image-set(
+        url("../../../../../assets/imgs/bonus/tablet/gift-photo-tablet@1x.webp")
+          1x,
+        url("../../../../../assets/imgs/bonus/tablet/gift-photo-tablet@2x.webp")
+          2x
+      );
+    }
   }
 
   @include desktop {
@@ -61,7 +80,16 @@
     padding-block-end: var(--space-11);
     padding-inline: var(--space-9);
 
-    @include responsive-bg("/assets/imgs/bonus/desktop/gift-photo-desktop");
+    background-image: url("../../../../../assets/imgs/bonus/desktop/gift-photo-desktop@1x.jpg");
+
+    @supports (background-image: image-set(url("") 1x)) {
+      background-image: image-set(
+        url("../../../../../assets/imgs/bonus/desktop/gift-photo-desktop@1x.webp")
+          1x,
+        url("../../../../../assets/imgs/bonus/desktop/gift-photo-desktop@2x.webp")
+          2x
+      );
+    }
   }
 }
 

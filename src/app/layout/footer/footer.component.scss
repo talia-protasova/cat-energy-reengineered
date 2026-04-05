@@ -1,5 +1,4 @@
 @use "abstracts/media" as *;
-@use "abstracts/images" as *;
 
 .footer {
   position: relative;
@@ -122,26 +121,44 @@
 
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 
-  @include responsive-bg("/assets/imgs/footer/map/mobile/bg-map-mobile", "png");
+  // fallback
+  background-image: url("../../../assets/imgs/footer/map/mobile/bg-map-mobile@1x.png");
+
+  // modern
+  @supports (background-image: image-set(url("") 1x)) {
+    background-image: image-set(
+      url("../../../assets/imgs/footer/map/mobile/bg-map-mobile@1x.webp") 1x,
+      url("../../../assets/imgs/footer/map/mobile/bg-map-mobile@2x.webp") 2x
+    );
+  }
 
   @include tablet {
     height: 25rem;
 
-    @include responsive-bg(
-      "/assets/imgs/footer/map/tablet/bg-map-tablet",
-      "png"
-    );
+    background-image: url("../../../assets/imgs/footer/map/tablet/bg-map-tablet@1x.png");
+
+    @supports (background-image: image-set(url("") 1x)) {
+      background-image: image-set(
+        url("../../../assets/imgs/footer/map/tablet/bg-map-tablet@1x.webp") 1x,
+        url("../../../assets/imgs/footer/map/tablet/bg-map-tablet@2x.webp") 2x
+      );
+    }
   }
 
   @include desktop {
     position: absolute;
     inset-block-start: 0;
 
-    @include responsive-bg(
-      "/assets/imgs/footer/map/desktop/bg-map-desktop",
-      "png"
-    );
+    background-image: url("../../../assets/imgs/footer/map/desktop/bg-map-desktop@1x.png");
+
+    @supports (background-image: image-set(url("") 1x)) {
+      background-image: image-set(
+        url("../../../assets/imgs/footer/map/desktop/bg-map-desktop@1x.webp") 1x,
+        url("../../../assets/imgs/footer/map/desktop/bg-map-desktop@2x.webp") 2x
+      );
+    }
   }
 }
 
