@@ -14,7 +14,7 @@ export class NavigationComponent {
   @Input() isOpen = false;
   @Output() linkClick = new EventEmitter<void>();
 
-  isDesktop = window.innerWidth >= 1024;
+  isDesktop = window.innerWidth >= 768;
 
   onLinkClick() {
     this.linkClick.emit();

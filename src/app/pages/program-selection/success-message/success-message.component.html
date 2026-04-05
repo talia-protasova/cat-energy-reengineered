@@ -1,0 +1,7 @@
+<div class="success" role="alert" aria-live="polite">
+  <h2 class="success__title">{{ title() }}</h2>
+  <p class="success__text">{{ text() }}</p>
+  <button class="button button--primary success__button" (click)="reset.emit()">
+    {{ buttonLabel() }}
+  </button>
+</div>

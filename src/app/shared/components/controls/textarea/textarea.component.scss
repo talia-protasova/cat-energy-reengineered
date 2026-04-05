@@ -1,0 +1,42 @@
+@use "abstracts/media" as *;
+
+.textarea {
+  inline-size: 100%;
+  min-block-size: 10.875rem;
+
+  padding: var(--space-3) var(--space-2) var(--space-4) var(--space-4);
+
+  background: var(--color-bg-primary);
+  resize: none;
+
+  font-family: var(--order-textarea-font-family);
+  font-weight: var(--order-textarea-font-weight);
+  font-size: var(--order-textarea-font-size-mobile);
+  line-height: var(--order-textarea-line-height-mobile);
+  color: var(--color-text-primary);
+
+  @include tablet {
+    font-size: var(--order-textarea-font-size-tablet);
+    line-height: var(--order-textarea-line-height-tablet);
+  }
+}
+
+.textarea::placeholder {
+  font-family: var(--order-input-font-family);
+  font-weight: var(--order-input-font-weight);
+  font-size: var(--order-input-font-size-mobile);
+  line-height: var(--order-input-line-height-mobile);
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: var(--order-input-font-size-tablet);
+    line-height: var(--order-input-line-height-tablet);
+  }
+}
+
+.textarea:active,
+.textarea:hover,
+.textarea:focus-visible {
+  outline: 2px solid var(--color-input-focus);
+  border: 2px solid var(--color-input-focus);
+}

@@ -20,7 +20,11 @@ $border-100: #e6e6e6;
 $border-200: #d9d9d9;
 
 // brand
-$green-500: #68b738;
+// $green-500: #68b738; initial brand color with contrast ration 2.49 not passsing even AA level
+
+// brand color for AA
+$green-500: #338502;
+
 $green-600: #5eaa2f;
 
 // states

@@ -65,6 +65,7 @@
 
   max-inline-size: none;
   block-size: 14.875rem;
+  width: auto;
 
   @include tablet {
     block-size: 32.375rem;

@@ -2,16 +2,10 @@
   <h1 class="program__main-title main-title">Program Selection</h1>
 
   @if (isSubmitted()) {
-    <div class="program__success" role="alert" aria-live="polite">
-      <h2 class="program__success-title">Request sent!</h2>
-      <p class="program__success-text">
-        We'll pick the best nutrition program for your cat and get back to you
-        soon.
-      </p>
-      <button class="button button--primary" (click)="resetToForm()">
-        Submit another request
-      </button>
-    </div>
+    <app-success-message
+      text="We'll pick the best nutrition program for your cat and get back to you soon."
+      (reset)="resetToForm()"
+    />
   } @else {
     <p class="program__desc">
       Fill out the form and we will choose the best nutrition program for your
@@ -31,69 +25,43 @@
               Cat information
             </legend>
 
-            <div class="program__field-wrapper">
-              <label for="cat-name" class="program__label">
-                Name <span aria-hidden="true">*</span>
-              </label>
-              <input
-                class="program__input"
-                [class.program__input--error]="
-                  formControls.name.touched && formControls.name.invalid
-                "
-                id="cat-name"
-                type="text"
-                formControlName="name"
-                placeholder="Barsik"
-                autocomplete="off"
-                [attr.aria-invalid]="
-                  formControls.name.touched && formControls.name.invalid
-                "
-                aria-describedby="cat-name-error"
-              />
-              @if (formControls.name.touched && formControls.name.invalid) {
-                <p class="program__error" id="cat-name-error">
-                  Name is required
-                </p>
-              }
-            </div>
+            <app-input
+              id="cat-name"
+              label="Name"
+              [required]="true"
+              placeholder="Barsik"
+              autocomplete="off"
+              [hasError]="
+                formControls.name.touched && formControls.name.invalid
+              "
+              errorText="Name is required"
+              errorId="cat-name-error"
+              formControlName="name"
+            />
 
-            <div class="program__field-wrapper">
-              <label for="cat-weight" class="program__label">
-                Weight (kg) <span aria-hidden="true">*</span>
-              </label>
-              <input
-                class="program__input"
-                [class.program__input--error]="
-                  formControls.weight.touched && formControls.weight.invalid
-                "
-                id="cat-weight"
-                type="number"
-                formControlName="weight"
-                placeholder="7"
-                inputmode="decimal"
-                [attr.aria-invalid]="
-                  formControls.weight.touched && formControls.weight.invalid
-                "
-                aria-describedby="cat-weight-error"
-              />
-              @if (formControls.weight.touched && formControls.weight.invalid) {
-                <p class="program__error" id="cat-weight-error">
-                  Enter valid weight
-                </p>
-              }
-            </div>
+            <app-input
+              id="cat-weight"
+              label="Weight (kg)"
+              [required]="true"
+              type="number"
+              placeholder="7"
+              inputmode="decimal"
+              [hasError]="
+                formControls.weight.touched && formControls.weight.invalid
+              "
+              errorText="Enter valid weight"
+              errorId="cat-weight-error"
+              formControlName="weight"
+            />
 
-            <div class="program__field-wrapper">
-              <label for="cat-age" class="program__label">Age (years)</label>
-              <input
-                class="program__input"
-                id="cat-age"
-                type="number"
-                formControlName="age"
-                placeholder="7"
-                inputmode="numeric"
-              />
-            </div>
+            <app-input
+              id="cat-age"
+              label="Age (years)"
+              type="number"
+              placeholder="7"
+              inputmode="numeric"
+              formControlName="age"
+            />
           </fieldset>
         </div>
 
@@ -104,53 +72,16 @@
           >
             <legend id="goal-title" class="visually-hidden">Goal</legend>
 
-            <div class="program__field-wrapper">
-              <input
-                class="program__input visually-hidden"
-                type="radio"
-                formControlName="objective"
-                id="lose-weight"
-                value="lose-weight"
+            @for (option of objectiveOptions; track option.value) {
+              <app-radio
+                [id]="option.value"
+                [value]="option.value"
+                [label]="option.label"
+                [checked]="formControls.objective.value === option.value"
+                (changed)="formControls.objective.setValue($event)"
+                (blurred)="formControls.objective.markAsTouched()"
               />
-              <label
-                class="program__label program__label--radio"
-                for="lose-weight"
-              >
-                Weight loss
-              </label>
-            </div>
-
-            <div class="program__field-wrapper">
-              <input
-                class="program__input visually-hidden"
-                type="radio"
-                formControlName="objective"
-                id="gain-weight"
-                value="gain-weight"
-              />
-              <label
-                class="program__label program__label--radio"
-                for="gain-weight"
-              >
-                Weight gain
-              </label>
-            </div>
-
-            <div class="program__field-wrapper">
-              <input
-                class="program__input visually-hidden"
-                type="radio"
-                formControlName="objective"
-                id="need-advice"
-                value="need-advice"
-              />
-              <label
-                class="program__label program__label--radio"
-                for="need-advice"
-              >
-                Not sure (need advice)
-              </label>
-            </div>
+            }
           </fieldset>
         </div>
       </div>
@@ -161,87 +92,47 @@
 
           <div class="program__owner-fields">
             <div>
-              <div class="program__field-wrapper">
-                <label for="email" class="program__label">
-                  Email <span aria-hidden="true">*</span>
-                </label>
-                <input
-                  class="program__input"
-                  [class.program__input--error]="
-                    formControls.email.touched && formControls.email.invalid
-                  "
-                  id="email"
-                  type="email"
-                  formControlName="email"
-                  placeholder="example@gmail.com"
-                  autocomplete="email"
-                  [attr.aria-invalid]="
-                    formControls.email.touched && formControls.email.invalid
-                  "
-                  aria-describedby="email-error"
-                />
-                <svg
-                  class="program__input-icon"
-                  viewBox="0 0 17 13"
-                  width="20"
-                  height="15"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <use href="/assets/imgs/sprite.svg#icon-mail"></use>
-                </svg>
-                @if (formControls.email.touched && formControls.email.errors) {
-                  <p class="program__error" id="email-error">
-                    @if (formControls.email.errors["required"]) {
-                      Email is required
-                    } @else if (formControls.email.errors["email"]) {
-                      Invalid email format
-                    }
-                  </p>
-                }
-              </div>
+              <app-input
+                id="email"
+                label="Email"
+                [required]="true"
+                type="email"
+                placeholder="example@gmail.com"
+                autocomplete="email"
+                [hasError]="
+                  formControls.email.touched && formControls.email.invalid
+                "
+                [errorText]="emailError"
+                errorId="email-error"
+                iconHref="/assets/imgs/sprite.svg#icon-mail"
+                iconViewBox="0 0 17 13"
+                [iconWidth]="20"
+                [iconHeight]="15"
+                formControlName="email"
+              />
             </div>
 
             <div>
-              <div class="program__field-wrapper">
-                <label for="tel" class="program__label">
-                  Phone <span aria-hidden="true">*</span>
-                </label>
-                <input
-                  class="program__input program__input--tel"
-                  [class.program__input--error]="
-                    formControls.phone.touched && formControls.phone.invalid
-                  "
-                  id="tel"
-                  type="tel"
-                  formControlName="phone"
-                  placeholder="+0 (000) 00 000-00-00"
-                  autocomplete="tel"
-                  inputmode="tel"
-                  [attr.aria-invalid]="
-                    formControls.phone.touched && formControls.phone.invalid
-                  "
-                  mask="+0 (000) 00 000-00-00"
-                  aria-describedby="phone-error"
-                />
-                <svg
-                  class="program__input-icon"
-                  viewBox="0 0 20 20"
-                  width="20"
-                  height="20"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <use href="/assets/imgs/sprite.svg#icon-phone"></use>
-                </svg>
-                @if (formControls.phone.touched && formControls.phone.errors) {
-                  <p class="program__error" id="phone-error">
-                    @if (formControls.phone.errors["required"]) {
-                      Phone is required
-                    }
-                  </p>
-                }
-              </div>
+              <app-input
+                id="tel"
+                label="Phone"
+                [required]="true"
+                type="tel"
+                placeholder="+0 (000) 00 000-00-00"
+                autocomplete="tel"
+                inputmode="tel"
+                mask="+0 (000) 00 000-00-00"
+                [hasError]="
+                  formControls.phone.touched && formControls.phone.invalid
+                "
+                errorText="Phone is required"
+                errorId="phone-error"
+                iconHref="/assets/imgs/sprite.svg#icon-phone"
+                iconViewBox="0 0 20 20"
+                [iconWidth]="20"
+                [iconHeight]="20"
+                formControlName="phone"
+              />
             </div>
           </div>
         </fieldset>
@@ -250,12 +141,11 @@
       <div class="program__comment">
         <fieldset class="program__control-groups">
           <legend class="program__fieldset-title">Comment</legend>
-          <textarea
-            class="program__comment-field"
-            formControlName="comment"
+          <app-textarea
             id="your-comment"
             placeholder="Tell us about your cat's habits"
-          ></textarea>
+            formControlName="comment"
+          />
         </fieldset>
       </div>
 
@@ -264,45 +154,15 @@
           <legend class="program__fieldset-title">Additional options</legend>
 
           <div class="program__extra-wrapper">
-            <div class="program__extra-item">
-              <input
-                class="visually-hidden program__input program__input--checkbox"
-                type="checkbox"
-                formControlName="sugar"
-                id="sugar"
+            @for (option of extraOptions; track option.id) {
+              <app-checkbox
+                [id]="option.id"
+                [label]="option.label"
+                [checked]="extrasControls[option.id].value"
+                (changed)="extrasControls[option.id].setValue($event)"
+                (blurred)="extrasControls[option.id].markAsTouched()"
               />
-              <label class="program__label" for="sugar">Sugar substitute</label>
-            </div>
-
-            <div class="program__extra-item">
-              <input
-                class="visually-hidden program__input program__input--checkbox"
-                type="checkbox"
-                formControlName="water"
-                id="water"
-              />
-              <label class="program__label" for="water">Drinking water</label>
-            </div>
-
-            <div class="program__extra-item">
-              <input
-                class="visually-hidden program__input program__input--checkbox"
-                type="checkbox"
-                formControlName="milk"
-                id="milk"
-              />
-              <label class="program__label" for="milk">Milk</label>
-            </div>
-
-            <div class="program__extra-item">
-              <input
-                class="visually-hidden program__input program__input--checkbox"
-                type="checkbox"
-                formControlName="vitamins"
-                id="vitamins"
-              />
-              <label class="program__label" for="vitamins">Vitamins</label>
-            </div>
+            }
           </div>
         </fieldset>
       </div>

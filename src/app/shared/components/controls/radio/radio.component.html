@@ -1,1 +1,15 @@
-
+<div class="radio">
+  <input
+    class="radio__input visually-hidden"
+    type="radio"
+    [id]="id()"
+    [value]="value()"
+    [checked]="checked()"
+    [disabled]="disabled()"
+    (change)="onSelect()"
+    (blur)="blurred.emit()"
+  />
+  <label class="radio__label" [for]="id()">
+    {{ label() }}
+  </label>
+</div>

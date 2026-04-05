@@ -17,11 +17,14 @@
   --color-accent: #{$green-500};
   --color-accent-hover: #{$green-600};
 
-  // button text colors for AAA
-  --color-text-button: #{$black};
+  // button text colors for AA
+  --color-text-button: #{$white};
 
   // button scroll to top
-  --color-button-scroll-to-top-bg: #{$grey-700};
+  --color-button-scroll-to-top-bg: #{$grey-100};
+
+  // skip link
+  --color-skip-link-text: #{$black};
 
   // borders
   --color-border-default: #{$grey-500};

@@ -1,0 +1,116 @@
+@use "abstracts/media" as *;
+
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  margin-block-end: var(--space-4);
+
+  @include tablet {
+    margin-block-end: var(--space-6);
+  }
+}
+
+.input-field__label {
+  margin-inline-end: var(--space-3);
+
+  font-family: var(--order-label-font-family);
+  font-weight: var(--order-label-font-weight);
+  font-size: var(--order-label-font-size-mobile);
+  line-height: var(--order-label-line-height-mobile);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+
+  @include tablet {
+    margin-inline-end: var(--space-4);
+    font-size: var(--order-label-font-size-tablet);
+    line-height: var(--order-label-line-height-tablet);
+  }
+}
+
+.input-field__input {
+  flex-grow: 1;
+  margin: 0;
+
+  padding-block: var(--space-3) var(--space-2);
+  padding-inline: var(--space-4) var(--space-2);
+
+  border: 1px solid var(--color-border-default);
+  background-color: transparent;
+
+  font-family: var(--order-input-font-family);
+  font-weight: var(--order-input-font-weight);
+  font-size: var(--order-input-font-size-mobile);
+  line-height: var(--order-input-line-height-mobile);
+  color: var(--color-text-primary);
+
+  @include tablet {
+    font-size: var(--order-input-font-size-tablet);
+    line-height: var(--order-input-line-height-tablet);
+  }
+}
+
+.input-field__input::placeholder {
+  font-family: var(--order-input-font-family);
+  font-weight: var(--order-input-font-weight);
+  font-size: var(--order-input-font-size-mobile);
+  line-height: var(--order-input-line-height-mobile);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+
+  @include tablet {
+    font-size: var(--order-input-font-size-tablet);
+    line-height: var(--order-input-line-height-tablet);
+  }
+}
+
+.input-field__input:active,
+.input-field__input:hover,
+.input-field__input:focus-visible {
+  outline: 2px solid var(--color-input-focus);
+  border: 2px solid var(--color-input-focus);
+}
+
+.input-field__input[type="number"] {
+  appearance: textfield;
+}
+
+.input-field__input[type="number"]::-webkit-outer-spin-button,
+.input-field__input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.input-field__input--error {
+  border: 2px solid var(--color-error);
+}
+
+.input-field__error {
+  position: absolute;
+
+  top: -1.3rem;
+
+  font-size: 0.95rem;
+  color: var(--color-error);
+}
+
+.input-field__icon {
+  position: absolute;
+
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+
+  inset-inline-start: calc(100% - 34px);
+  inset-block-start: 50%;
+
+  transform: translateY(-50%);
+  fill: currentColor;
+
+  @include desktop {
+    inset-inline-start: calc(100% - 45px);
+  }
+}
+
+.input-field__input:focus ~ .input-field__icon {
+  color: var(--color-accent-hover);
+}
