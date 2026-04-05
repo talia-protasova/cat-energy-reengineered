@@ -12,6 +12,7 @@ A re-engineering of a static HTML Academy training project into a modern Angular
 |------|-------------|---------------|----------------|-----|
 | `/` | 100 | 100 | 100 | 100 |
 | `/catalog` | 100 | 100 | 100 | 100 |
+| `/program-selection` | 100 | 100 | 100 | 100 |
 
 Measured with `ng build` + `npx serve --single`, Lighthouse desktop, no throttling.
 
@@ -28,6 +29,7 @@ Measured with `ng build` + `npx serve --single`, Lighthouse desktop, no throttli
 ---
 
 ## Project Structure
+```
 src/
 ├── app/
 │   ├── core/
@@ -62,6 +64,7 @@ src/
 ├── base/       # reset, base
 ├── layout/     # wrapper
 └── ui/         # buttons, fonts
+```
 
 ---
 
