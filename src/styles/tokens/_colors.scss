@@ -32,13 +32,10 @@ $error-400: #ff8282;
 
 // overlays
 $white-30: rgba(255, 255, 255, 0.3);
-$green-overlay: rgba(100, 167, 60, 0.85);
+// $green-overlay: rgba(100, 167, 60, 0.85);
+$green-overlay: rgb(51, 133, 2, 0.85);
 $focus-overlay: rgba(4, 83, 26, 0.5);
-
-// overlays
-$white-30: rgba(255, 255, 255, 0.3);
-$green-overlay: rgba(100, 167, 60, 0.85);
-$focus-overlay: rgba(4, 83, 26, 0.5);
+$nav-index-overlay: rgba(50, 128, 3, 0.66);
 
 // loader overlays — light / dark
 $loader-overlay-light: rgba(242, 242, 242, 0.88);

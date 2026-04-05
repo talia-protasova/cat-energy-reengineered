@@ -102,6 +102,8 @@
   }
 
   @include desktop {
+    background-color: var(--nav-link-bg, transparent);
+
     font-family: var(--header-nav-link-font-family-desktop);
     font-size: var(--header-nav-link-font-size-desktop);
     line-height: var(--header-nav-link-line-height-desktop);

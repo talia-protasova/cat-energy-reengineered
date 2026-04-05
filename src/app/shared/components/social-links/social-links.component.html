@@ -5,7 +5,13 @@
       [href]="link.url"
       [attr.aria-label]="getMeta(link.type).label"
     >
-      <svg class="social__svg" width="24" height="24">
+      <svg
+        class="social__svg"
+        width="24"
+        height="24"
+        aria-hidden="true"
+        focusable="false"
+      >
         <use
           [attr.xlink:href]="
             '/assets/imgs/sprite.svg' + getMeta(link.type).icon

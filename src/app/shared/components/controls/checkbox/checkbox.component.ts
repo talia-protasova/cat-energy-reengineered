@@ -3,6 +3,9 @@ import { Component, input, output } from '@angular/core';
 @Component({
   selector: 'app-checkbox',
   imports: [],
+  host: {
+    '[attr.id]': 'null',
+  },
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.scss',
 })

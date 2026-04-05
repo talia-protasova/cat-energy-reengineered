@@ -3,17 +3,30 @@
   [class.header--index]="headerVariant === 'index'"
   [class.header--opened]="isMenuOpen"
 >
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="header__wrapper wrapper">
     <a class="header__logo-pic-link" routerLink="/">
-      <svg class="header__logo header__logo--mobile">
+      <svg
+        class="header__logo header__logo--mobile"
+        aria-hidden="true"
+        focusable="false"
+      >
         <use href="/assets/imgs/sprite.svg#logo-mobile"></use>
       </svg>
 
-      <svg class="header__logo header__logo--tablet">
+      <svg
+        class="header__logo header__logo--tablet"
+        aria-hidden="true"
+        focusable="false"
+      >
         <use href="/assets/imgs/sprite.svg#logo-tablet"></use>
       </svg>
 
-      <svg class="header__logo header__logo--desktop">
+      <svg
+        class="header__logo header__logo--desktop"
+        aria-hidden="true"
+        focusable="false"
+      >
         <use href="/assets/imgs/sprite.svg#logo-desktop"></use>
       </svg>
 

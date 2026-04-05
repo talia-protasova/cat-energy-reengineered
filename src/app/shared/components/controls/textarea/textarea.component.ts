@@ -18,6 +18,9 @@ export class TextareaComponent implements ControlValueAccessor {
   readonly id = input.required<string>();
   readonly placeholder = input<string>('');
 
+  readonly label = input<string>('');
+  readonly required = input<boolean>(false);
+
   readonly value = signal<string>('');
   disabled = false;
 

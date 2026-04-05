@@ -5,7 +5,11 @@ a {
   text-decoration: none;
   transition: all 0.2s;
 }
-
+a:focus,
+a:focus-visible {
+  outline: 2px solid #f26928;
+  outline-offset: 2px;
+}
 ul,
 ol {
   list-style: none;
@@ -31,6 +35,11 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   transition: all 0.2s;
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid #f26928;
+  outline-offset: 2px;
 }
 
 img {

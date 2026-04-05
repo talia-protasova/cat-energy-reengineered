@@ -5,6 +5,9 @@ import { NgxMaskDirective } from 'ngx-mask';
 @Component({
   selector: 'app-input',
   imports: [NgxMaskDirective],
+  host: {
+    '[attr.id]': 'null',
+  },
   templateUrl: './input.component.html',
   styleUrl: './input.component.scss',
   providers: [

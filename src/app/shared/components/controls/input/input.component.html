@@ -36,9 +36,13 @@
     </svg>
   }
 
-  @if (hasError() && errorText()) {
-    <p class="input-field__error" [id]="errorId()">
+  <p
+    class="input-field__error"
+    [id]="errorId()"
+    [attr.aria-hidden]="!hasError() || null"
+  >
+    @if (hasError() && errorText()) {
       {{ errorText() }}
-    </p>
-  }
+    }
+  </p>
 </div>

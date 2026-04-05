@@ -1,9 +1,17 @@
-<textarea
-  class="textarea"
-  [id]="id()"
-  [placeholder]="placeholder()"
-  [value]="value()"
-  [disabled]="disabled"
-  (input)="onInput($event)"
-  (blur)="onTouched()"
-></textarea>
+<div class="textarea-field">
+  <label class="textarea-field__label visually-hidden" [for]="id()">
+    {{ label() }}
+    @if (required()) {
+      <span aria-hidden="true">*</span>
+    }
+  </label>
+  <textarea
+    class="textarea"
+    [id]="id()"
+    [placeholder]="placeholder()"
+    [value]="value()"
+    [disabled]="disabled"
+    (input)="onInput($event)"
+    (blur)="onTouched()"
+  ></textarea>
+</div>

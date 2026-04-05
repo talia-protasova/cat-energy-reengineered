@@ -11,7 +11,7 @@
   // text
   --color-text-primary: #{$white};
   --color-text-secondary: #{$grey-300};
-  --color-text-muted: #{$grey-500};
+  --color-text-muted: #{$grey-200};
   --color-text-inverse: #{$black};
 
   // skip link
@@ -47,6 +47,7 @@
 
   // overlays
   --color-loader-overlay: #{$loader-overlay-dark};
+  --nav-index-overlay: #{$nav-index-overlay};
 
   // navigation
   --header-nav-link-color: var(--color-text-primary);

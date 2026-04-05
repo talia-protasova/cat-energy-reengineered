@@ -8,6 +8,7 @@
     [disabled]="disabled()"
     (change)="onSelect()"
     (blur)="blurred.emit()"
+    [name]="'objective'"
   />
   <label class="radio__label" [for]="id()">
     {{ label() }}

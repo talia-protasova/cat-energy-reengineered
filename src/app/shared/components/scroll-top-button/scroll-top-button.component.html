@@ -5,7 +5,13 @@
   aria-label="Scroll to top"
   (click)="scrollToTop()"
 >
-  <svg width="32" height="12" class="scroll-top__icon">
+  <svg
+    width="32"
+    height="12"
+    class="scroll-top__icon"
+    aria-hidden="true"
+    focusable="false"
+  >
     <use href="/assets/imgs/sprite.svg#arr-right"></use>
   </svg>
 </button>

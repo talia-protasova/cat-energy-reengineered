@@ -3,6 +3,9 @@ import { Component, input, output } from '@angular/core';
 @Component({
   selector: 'app-radio',
   imports: [],
+  host: {
+    '[attr.id]': 'null',
+  },
   templateUrl: './radio.component.html',
   styleUrl: './radio.component.scss',
 })

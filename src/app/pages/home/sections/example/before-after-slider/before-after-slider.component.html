@@ -86,22 +86,16 @@
       </button>
 
       <div class="slider__range">
-        <label class="slider__label">
-          <span class="visually-hidden">
-            Cat’s condition before and after the nutrition program
-          </span>
-
-          <input
-            type="range"
-            class="slider__input"
-            min="0"
-            max="100"
-            [value]="value()"
-            (input)="onSliderChange($event)"
-            (keydown)="onKeyDown($event)"
-            aria-label="Before & After Slider"
-          />
-        </label>
+        <input
+          type="range"
+          class="slider__input"
+          min="0"
+          max="100"
+          [value]="value()"
+          (input)="onSliderChange($event)"
+          (keydown)="onKeyDown($event)"
+          aria-label="Before & After Slider"
+        />
       </div>
 
       <button

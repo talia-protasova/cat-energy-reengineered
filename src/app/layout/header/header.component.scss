@@ -15,6 +15,7 @@
   @include desktop {
     --nav-link-color: var(--header-nav-link-color-inverse);
     --nav-link-underline: var(--header-nav-link-decor-inverse);
+    --nav-link-bg: var(--nav-index-overlay);
   }
 }
 
