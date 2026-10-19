@@ -1,0 +1,36 @@
+:root {
+  // Brand
+  --green-500: oklch(70.307% 0.1782 135.985deg);
+  --green-600: oklch(66.427% 0.1727 136.059deg);
+
+  // Neutrals
+  --neutral-0: oklch(100% 0 0deg);
+  --neutral-100: oklch(96.115% 0 0deg);
+  --neutral-150: oklch(94.007% 0 0deg);
+  --neutral-200: oklch(93.705% 0 0deg);
+  --neutral-250: oklch(92.494% 0 0deg);
+  --neutral-300: oklch(92.191% 0 0deg);
+  --neutral-350: oklch(89.449% 0 0deg);
+  --neutral-400: oklch(88.531% 0 0deg);
+  --neutral-450: oklch(86.686% 0 0deg);
+  --neutral-500: oklch(84.832% 0 0deg);
+  --neutral-550: oklch(82.032% 0 0deg);
+  --neutral-600: oklch(78.892% 0 0deg);
+  --neutral-650: oklch(58% 0 0deg);
+  --neutral-700: oklch(51.028% 0 0deg);
+  --neutral-800: oklch(38.666% 0 0deg);
+  --neutral-850: oklch(31% 0 0deg);
+  --neutral-900: oklch(25.197% 0 0deg);
+  --neutral-950: oklch(17.764% 0 0deg);
+  --neutral-1000: oklch(0% 0 0deg);
+
+  // Feedback
+  --red-400: oklch(74.777% 0.1524 21.358deg);
+
+  // Alpha colors
+  --white-alpha-30: oklch(100% 0 0deg / 30%);
+  --deep-green-alpha-50: oklch(38.602% 0.1132 146.665deg / 50%);
+  --green-500-alpha-85: oklch(70.307% 0.1782 135.985deg / 85%);
+  --black-alpha-19: oklch(0% 0 0deg / 19%);
+  --black-alpha-24: oklch(0% 0 0deg / 24%);
+}
