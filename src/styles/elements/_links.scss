@@ -1,0 +1,14 @@
+:where(a) {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+:where(a:hover) {
+  text-decoration-thickness: 0.125em;
+}
+
+:where(a:focus-visible) {
+  outline: 0.1875rem solid var(--color-focus-ring);
+  outline-offset: 0.1875rem;
+}

@@ -1,0 +1,17 @@
+@use '../settings/breakpoints' as bp;
+
+:root {
+  --page-gutter: var(--space-5);
+  --content-max-width: 76.25rem;
+}
+
+@media (min-width: bp.$breakpoint-tablet) {
+  :root {
+    --page-gutter: 1.875rem;
+  }
+}
+
+.o-container {
+  inline-size: min(calc(100% - var(--page-gutter) - var(--page-gutter)), var(--content-max-width));
+  margin-inline: auto;
+}

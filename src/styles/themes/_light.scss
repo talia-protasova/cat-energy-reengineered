@@ -1,0 +1,25 @@
+:root {
+  color-scheme: light;
+
+  // Backgrounds
+  --color-bg-page: var(--neutral-0);
+  --color-bg-surface: var(--neutral-100);
+  --color-bg-muted: var(--neutral-150);
+
+  // Text
+  --color-text-primary: var(--neutral-1000);
+  --color-text-secondary: var(--neutral-800);
+  --color-text-inverse: var(--neutral-0);
+
+  // Borders
+  --color-border-default: var(--neutral-400);
+  --color-border-strong: var(--neutral-500);
+
+  // Actions
+  --color-action-primary: var(--green-500);
+  --color-action-primary-hover: var(--green-600);
+  --color-action-on-primary: var(--neutral-1000);
+
+  // Focus
+  --color-focus-ring: var(--neutral-900);
+}

@@ -1,0 +1,25 @@
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  // Backgrounds
+  --color-bg-page: var(--neutral-950);
+  --color-bg-surface: var(--neutral-900);
+  --color-bg-muted: var(--neutral-850);
+
+  // Text
+  --color-text-primary: var(--neutral-100);
+  --color-text-secondary: var(--neutral-600);
+  --color-text-inverse: var(--neutral-1000);
+
+  // Borders
+  --color-border-default: var(--neutral-650);
+  --color-border-strong: var(--neutral-600);
+
+  // Actions
+  --color-action-primary: var(--green-500);
+  --color-action-primary-hover: var(--green-600);
+  --color-action-on-primary: var(--neutral-1000);
+
+  // Focus
+  --color-focus-ring: var(--green-500);
+}
