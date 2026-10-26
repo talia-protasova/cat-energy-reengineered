@@ -202,7 +202,27 @@
   }
 </style>
 
-<main class="main">
+<main id="main-content" class="o-container">
+  <h1>Cat Energy Re-engineered</h1>
+
+  <div>
+    <label for="theme-mode">Theme preference</label>
+
+    <select
+      id="theme-mode"
+      #themeSelect
+      [value]="theme.preference()"
+      (change)="setTheme(themeSelect.value)"
+    >
+      <option value="system">System</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
+
+  <p>Active theme: {{ theme.resolvedTheme() }}</p>
+
+  <router-outlet />
   <div class="content">
     <div class="left-side">
       <svg
