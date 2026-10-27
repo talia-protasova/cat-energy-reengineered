@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+}
+
+.app-shell__preferences {
+  background-color: var(--color-bg-page);
+}
+
+.app-shell__preferences-inner {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+}
+
+.app-shell__main {
+  flex: 1;
+}

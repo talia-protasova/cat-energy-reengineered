@@ -32,8 +32,7 @@
     "label": "Theme preference",
     "light": "Light",
     "dark": "Dark",
-    "system": "System",
-    "active": "Active theme"
+    "system": "System"
   },
   "language": {
     "label": "Language"

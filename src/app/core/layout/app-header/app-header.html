@@ -1,0 +1,100 @@
+<header class="app-header">
+  <div class="app-header__inner o-container">
+    <a
+      class="app-header__logo-link"
+      routerLink="/"
+      [attr.aria-label]="'navigation.goHome' | transloco"
+    >
+      <svg
+        class="app-header__logo app-header__logo--mobile"
+        width="191"
+        height="38"
+        viewBox="0 0 191 38"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/images/sprite.svg#logo-mobile" />
+      </svg>
+
+      <svg
+        class="app-header__logo app-header__logo--tablet"
+        width="174"
+        height="52"
+        viewBox="0 0 174 52"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/images/sprite.svg#logo-tablet" />
+      </svg>
+
+      <svg
+        class="app-header__logo app-header__logo--desktop"
+        width="202"
+        height="60"
+        viewBox="0 0 202 60"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/images/sprite.svg#logo-desktop" />
+      </svg>
+    </a>
+
+    <button
+      #menuButton
+      class="app-header__menu-button"
+      type="button"
+      [attr.aria-label]="
+        (isMenuOpen() ? 'navigation.closeMenu' : 'navigation.openMenu') | transloco
+      "
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-controls="primary-navigation"
+      (click)="toggleMenu()"
+    >
+      <span class="app-header__menu-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav
+      id="primary-navigation"
+      class="app-header__nav"
+      [class.app-header__nav--open]="isMenuOpen()"
+    >
+      <ul class="app-header__nav-list">
+        <li class="app-header__nav-item">
+          <a
+            class="app-header__nav-link"
+            routerLink="/"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            ariaCurrentWhenActive="page"
+          >
+            {{ 'navigation.home' | transloco }}
+          </a>
+        </li>
+
+        <li class="app-header__nav-item">
+          <a
+            class="app-header__nav-link"
+            routerLink="/catalog"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            ariaCurrentWhenActive="page"
+          >
+            {{ 'navigation.catalog' | transloco }}
+          </a>
+        </li>
+
+        <li class="app-header__nav-item">
+          <a
+            class="app-header__nav-link"
+            routerLink="/program"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            ariaCurrentWhenActive="page"
+          >
+            {{ 'navigation.program' | transloco }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

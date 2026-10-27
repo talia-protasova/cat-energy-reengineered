@@ -1,0 +1,298 @@
+:host {
+  display: block;
+}
+
+.app-header {
+  position: relative;
+  background-color: var(--color-bg-page);
+  border-block-end: 1px solid var(--color-border-default);
+}
+
+// Header layout
+
+.app-header__inner {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+}
+
+// Logo
+
+.app-header__logo-link {
+  display: block;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 4px;
+  }
+}
+
+.app-header__logo {
+  display: none;
+  max-inline-size: 100%;
+  block-size: auto;
+  color: var(--color-text-primary);
+  fill: currentcolor;
+
+  &--mobile {
+    display: block;
+    inline-size: 11.9375rem;
+  }
+}
+
+// Mobile menu button
+
+.app-header__menu-button {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 3px;
+  }
+}
+
+// Burger icon
+
+.app-header__menu-icon {
+  position: relative;
+  display: block;
+  inline-size: 1.5rem;
+  block-size: 2px;
+  background-color: currentcolor;
+
+  &::before,
+  &::after {
+    position: absolute;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 2px;
+    background-color: currentcolor;
+    content: '';
+    transition: transform var(--motion-fast, 150ms) ease;
+  }
+
+  &::before {
+    inset-block-start: -0.5rem;
+  }
+
+  &::after {
+    inset-block-start: 0.5rem;
+  }
+}
+
+// Open menu icon
+
+.app-header__menu-button[aria-expanded='true'] {
+  .app-header__menu-icon {
+    background-color: transparent;
+
+    &::before {
+      transform: translateY(0.5rem) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+  }
+}
+
+// Mobile navigation
+
+.app-header__nav {
+  position: absolute;
+  z-index: var(--z-menu, 10);
+  inset-block-start: 100%;
+  inset-inline: 0;
+  display: none;
+  min-inline-size: 0;
+  max-block-size: 70dvh;
+  overflow-y: auto;
+  background-color: var(--color-bg-page);
+  border-block-end: 1px solid var(--color-border-default);
+
+  &--open {
+    display: block;
+  }
+}
+
+.app-header__nav-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-header__nav-item {
+  min-inline-size: 0;
+  border-block-start: 1px solid var(--color-border-default);
+}
+
+.app-header__nav-link {
+  position: relative;
+  display: block;
+  padding-block: var(--space-4);
+  padding-inline: var(--space-2);
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: -2px;
+  }
+
+  &.is-active {
+    color: var(--color-action-primary);
+  }
+}
+
+// Tablet — 768px
+
+@media (width >= 48rem) {
+  .app-header__inner {
+    padding-block: var(--space-5);
+  }
+
+  .app-header__logo {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      inline-size: 10.875rem;
+    }
+  }
+
+  .app-header__menu-button {
+    display: none;
+  }
+
+  .app-header__nav {
+    position: static;
+    z-index: auto;
+    display: block;
+    flex: 1 1 auto;
+    min-inline-size: 0;
+    max-block-size: none;
+    overflow: visible;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .app-header__nav-list {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-4);
+  }
+
+  .app-header__nav-item {
+    border: 0;
+  }
+
+  .app-header__nav-link {
+    padding-block: var(--space-3);
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: start;
+
+    &.is-active {
+      color: var(--color-text-primary);
+
+      &::after {
+        position: absolute;
+        inset-inline: 0;
+        inset-block-end: 0;
+        block-size: 2px;
+        background-color: var(--color-action-primary);
+        content: '';
+      }
+    }
+  }
+}
+
+// Desktop — 1440px
+
+@media (width >= 90rem) {
+  .app-header__inner {
+    gap: var(--space-6);
+  }
+
+  .app-header__logo {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+      inline-size: 12.625rem;
+    }
+  }
+
+  .app-header__nav {
+    flex: 1 1 auto;
+  }
+
+  .app-header__nav-list {
+    gap: var(--space-6);
+  }
+
+  .app-header__nav-link {
+    font-size: 1.25rem;
+  }
+}
+
+// Reduced motion
+
+@media (prefers-reduced-motion: reduce) {
+  .app-header__menu-icon {
+    &::before,
+    &::after {
+      transition: none;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+<footer class="app-footer">
+  <div class="app-footer__inner o-container">
+    <!-- Logo -->
+
+    <a
+      class="app-footer__logo-link"
+      routerLink="/"
+      [attr.aria-label]="'navigation.goHome' | transloco"
+    >
+      <svg
+        class="app-footer__logo"
+        width="128"
+        height="24"
+        viewBox="0 0 128 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/images/sprite.svg#footer-logo" />
+      </svg>
+    </a>
+
+    <!-- Social media -->
+
+    <ul class="app-footer__social-list">
+      <li class="app-footer__social-item">
+        <a
+          class="app-footer__social-link"
+          href="#"
+          aria-label="Instagram"
+          aria-disabled="true"
+          (click)="$event.preventDefault()"
+        >
+          <svg
+            class="app-footer__social-icon app-footer__social-icon--instagram"
+            viewBox="0 0 16.1 16"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="/images/sprite.svg#icon-insta" />
+          </svg>
+        </a>
+      </li>
+
+      <li class="app-footer__social-item">
+        <a
+          class="app-footer__social-link"
+          href="#"
+          aria-label="Facebook"
+          aria-disabled="true"
+          (click)="$event.preventDefault()"
+        >
+          <svg
+            class="app-footer__social-icon app-footer__social-icon--facebook"
+            viewBox="0 0 10 19"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="/images/sprite.svg#icon-fb" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <!-- HTML Academy -->
+
+    <a class="app-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
+      <span class="app-footer__academy-name">HTML Academy</span>
+
+      <svg
+        class="app-footer__academy-icon"
+        width="40"
+        height="40"
+        viewBox="0 0 60 60"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/images/sprite.svg#htmlacademy" />
+      </svg>
+    </a>
+  </div>
+</footer>

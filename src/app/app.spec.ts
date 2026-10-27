@@ -13,7 +13,6 @@ const translations = {
       light: 'Light',
       dark: 'Dark',
       system: 'System',
-      active: 'Active theme',
     },
     language: { label: 'Language' },
   },
@@ -23,7 +22,6 @@ const translations = {
       light: 'Светлая',
       dark: 'Тёмная',
       system: 'Как в системе',
-      active: 'Текущая тема',
     },
     language: { label: 'Язык' },
   },
@@ -33,7 +31,6 @@ const translations = {
       light: 'Claro',
       dark: 'Oscuro',
       system: 'Según el sistema',
-      active: 'Tema activo',
     },
     language: { label: 'Idioma' },
   },
@@ -43,7 +40,6 @@ const translations = {
       light: 'فاتح',
       dark: 'داكن',
       system: 'حسب إعدادات النظام',
-      active: 'المظهر الحالي',
     },
     language: { label: 'اللغة' },
   },
@@ -90,11 +86,17 @@ describe('App', () => {
     expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it('should render the title', async () => {
-    const fixture = await createApp();
-    const heading = fixture.nativeElement.querySelector('h1') as HTMLHeadingElement;
+  it('should render the application shell', () => {
+    const fixture = TestBed.createComponent(App);
 
-    expect(heading.textContent?.trim()).toBe('Cat Energy Re-engineered');
+    fixture.detectChanges();
+
+    const element = fixture.nativeElement as HTMLElement;
+
+    expect(element.querySelector('app-shell')).not.toBeNull();
+    expect(element.querySelector('app-header')).not.toBeNull();
+    expect(element.querySelector('main#main-content')).not.toBeNull();
+    expect(element.querySelector('app-footer')).not.toBeNull();
   });
 
   it('should render accessible theme and language selectors', async () => {
