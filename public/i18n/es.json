@@ -1,4 +1,33 @@
 {
+  "common": {
+    "skipToMain": "Saltar al contenido principal",
+    "logoAlt": "Logotipo de Cat Energy",
+    "requiredFieldsNote": "* — Campos obligatorios"
+  },
+  "seo": {
+    "home": {
+      "title": "Cat Energy — Alimentación funcional para gatos",
+      "description": "Descubre los programas de alimentación Cat Energy Slim y Pro y cómo funciona la alimentación funcional para gatos."
+    },
+    "catalog": {
+      "title": "Catálogo de productos — Cat Energy",
+      "description": "Descubre los productos Cat Energy Slim y Pro, sus sabores, formatos y complementos."
+    },
+    "program": {
+      "title": "Elige un programa de alimentación — Cat Energy",
+      "description": "Cuéntanos cómo es tu gato y elige un programa de alimentación Cat Energy."
+    }
+  },
+  "navigation": {
+    "label": "Navegación principal",
+    "home": "Inicio",
+    "catalog": "Catálogo de productos",
+    "program": "Elegir un programa",
+    "menu": "Menú",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "goHome": "Ir a la página de inicio de Cat Energy"
+  },
   "theme": {
     "label": "Preferencia de tema",
     "light": "Claro",
@@ -8,5 +37,156 @@
   },
   "language": {
     "label": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "Alimentación funcional para gatos",
+      "subtitle": "¿Te cuidas? ¡Cuida también de tu gato!",
+      "cta": "Elegir un programa",
+      "imageAlt": "Alimento para gatos Cat Energy con pollo"
+    },
+    "programs": {
+      "heading": "Programas de alimentación",
+      "slim": {
+        "title": "Pérdida de peso",
+        "description": "¿Tu gato pesa más que un perro y casi ha perdido la capacidad de trepar a los árboles? ¡Es hora de ponerse a dieta! Cat Energy Slim le ayudará a perder el peso que le sobra.",
+        "catalogLink": "Catálogo Slim"
+      },
+      "pro": {
+        "title": "Aumento de peso",
+        "description": "¿Quieres que tu gato se gane el respeto de los gatos del barrio e incluso de los perros? ¡Cat Energy Pro le ayudará a desarrollar su musculatura!",
+        "catalogLink": "Catálogo Pro"
+      }
+    },
+    "benefits": {
+      "title": "Cómo funciona",
+      "nutrients": "La alimentación funcional contiene únicamente nutrientes beneficiosos.",
+      "preparation": "Se presenta en polvo: solo hay que añadir agua hirviendo y listo.",
+      "replacement": "Sustituye una o dos comidas habituales por nuestro alimento funcional.",
+      "results": "En solo un mes podrás apreciar cambios positivos en tu gato."
+    },
+    "example": {
+      "title": "Un ejemplo real",
+      "description": "Boris perdió 5 kg en dos meses simplemente sustituyendo su comida habitual por Cat Energy Slim. ¡Un gran resultado sin entrenamientos agotadores! Además, no cambió sus costumbres y sigue durmiendo 16 horas al día.",
+      "metricHeading": "Indicadores",
+      "descriptionHeading": "Descripción",
+      "weightLoss": "Peso perdido",
+      "timeTaken": "Tiempo empleado",
+      "foodCost": "Gastos de alimentación",
+      "before": "Antes",
+      "after": "Después",
+      "beforeImageAlt": "El gato Boris antes de la dieta",
+      "afterImageAlt": "El gato Boris después de la dieta",
+      "comparisonLabel": "Comparar a Boris antes y después de la dieta"
+    }
+  },
+  "catalog": {
+    "title": "Catálogo de productos",
+    "fields": {
+      "name": "Nombre",
+      "quantity": "Cantidad",
+      "weight": "Peso",
+      "flavor": "Sabor",
+      "price": "Precio"
+    },
+    "actions": {
+      "order": "Pedir"
+    },
+    "productLines": {
+      "slim": "Cat Energy Slim",
+      "pro": "Cat Energy Pro"
+    },
+    "flavors": {
+      "chicken": "Pollo",
+      "fish": "Pescado",
+      "buckwheat": "Trigo sarraceno",
+      "rice": "Arroz"
+    },
+    "productImageAlt": "Alimento {{product}}, {{weight}} g, sabor a {{flavor}}",
+    "more": {
+      "title": "Descubre tropecientos productos más",
+      "description": "¡En realidad tenemos muchos más sabores!",
+      "showAll": "Ver todos"
+    },
+    "extras": {
+      "title": "Productos adicionales",
+      "items": {
+        "sweetener": "Edulcorante",
+        "water": "Agua potable",
+        "milk": "Leche",
+        "vitamins": "Vitaminas"
+      },
+      "onePack": "1 paquete ({{grams}} g)",
+      "fiveLiters": "5 litros",
+      "oneLiter": "1 litro",
+      "bonus": "¡Pídelo todo y llévate de regalo una funda para tu gato!"
+    }
+  },
+  "program": {
+    "title": "Elegir un programa",
+    "intro": "Rellena el formulario y encontraremos un programa de alimentación para tu gato.",
+    "cat": {
+      "legend": "Datos del gato",
+      "name": "Nombre",
+      "namePlaceholder": "Barsik",
+      "weight": "Peso (kg)",
+      "weightPlaceholder": "7",
+      "age": "Edad (años)",
+      "agePlaceholder": "7"
+    },
+    "goal": {
+      "legend": "Objetivo",
+      "loseWeight": "Pérdida de peso",
+      "gainWeight": "Aumento de peso",
+      "needAdvice": "No lo sé (necesito vuestro consejo)"
+    },
+    "owner": {
+      "legend": "Datos de contacto del dueño del gato",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "name@example.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "Ej.: +1234567890"
+    },
+    "comment": {
+      "legend": "Comentarios del dueño",
+      "label": "Comentarios",
+      "placeholder": "Cuéntanos los hábitos y las peculiaridades de tu gato"
+    },
+    "extras": {
+      "legend": "Complementos"
+    },
+    "actions": {
+      "submit": "Enviar solicitud"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "catNameRequired": "Introduce el nombre de tu gato.",
+      "weightRequired": "Indica el peso de tu gato.",
+      "weightInvalid": "Introduce un peso válido.",
+      "weightPositive": "El peso debe ser mayor que cero.",
+      "ageInvalid": "Introduce una edad válida.",
+      "ageNonNegative": "La edad no puede ser negativa.",
+      "goalRequired": "Elige un objetivo.",
+      "emailRequired": "Introduce tu dirección de correo electrónico.",
+      "emailInvalid": "Introduce una dirección de correo electrónico válida.",
+      "phoneRequired": "Introduce tu número de teléfono.",
+      "phoneInvalid": "Introduce un número de teléfono válido.",
+      "submitSuccess": "Se ha enviado tu solicitud.",
+      "submitError": "No se ha podido enviar la solicitud. Inténtalo de nuevo."
+    }
+  },
+  "footer": {
+    "dealers": "¡Invitamos a los distribuidores a colaborar!",
+    "address": {
+      "street": "Calle Bolshaya Konyushennaya, 19/8",
+      "city": "San Petersburgo"
+    },
+    "mapLabel": "Mapa con la dirección de Cat Energy",
+    "social": {
+      "vk": "VKontakte",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "academyLinkLabel": "Visitar el curso de HTML Academy sobre maquetación adaptable y automatización"
   }
 }

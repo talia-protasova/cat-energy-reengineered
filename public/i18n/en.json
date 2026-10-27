@@ -1,4 +1,33 @@
 {
+  "common": {
+    "skipToMain": "Skip to main content",
+    "logoAlt": "Cat Energy logo",
+    "requiredFieldsNote": "* — Required fields"
+  },
+  "seo": {
+    "home": {
+      "title": "Cat Energy — Functional nutrition for cats",
+      "description": "Explore Cat Energy Slim and Pro nutrition programs and see how functional cat food works."
+    },
+    "catalog": {
+      "title": "Product catalog — Cat Energy",
+      "description": "Explore Cat Energy Slim and Pro products, flavors, package sizes, and optional extras."
+    },
+    "program": {
+      "title": "Choose a nutrition program — Cat Energy",
+      "description": "Tell us about your cat and choose a Cat Energy nutrition program."
+    }
+  },
+  "navigation": {
+    "label": "Main navigation",
+    "home": "Home",
+    "catalog": "Product catalog",
+    "program": "Choose a program",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "goHome": "Go to the Cat Energy home page"
+  },
   "theme": {
     "label": "Theme preference",
     "light": "Light",
@@ -8,5 +37,156 @@
   },
   "language": {
     "label": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Functional nutrition for cats",
+      "subtitle": "Taking care of yourself? Take care of your cat, too!",
+      "cta": "Choose a program",
+      "imageAlt": "Cat Energy chicken-flavored cat food"
+    },
+    "programs": {
+      "heading": "Nutrition programs",
+      "slim": {
+        "title": "Weight loss",
+        "description": "Does your cat weigh more than a dog and barely climb trees anymore? Time for a diet! Cat Energy Slim can help your pet lose excess weight.",
+        "catalogLink": "Slim catalog"
+      },
+      "pro": {
+        "title": "Weight gain",
+        "description": "Want your cat to earn respect from the neighborhood cats — and even dogs? Cat Energy Pro can help your cat build muscle!",
+        "catalogLink": "Pro catalog"
+      }
+    },
+    "benefits": {
+      "title": "How it works",
+      "nutrients": "Functional nutrition contains only beneficial nutrients.",
+      "preparation": "It comes as a powder: just add boiling water and it is ready.",
+      "replacement": "Replace one or two regular meals with our functional food.",
+      "results": "See positive changes in your cat after just one month."
+    },
+    "example": {
+      "title": "Real-life example",
+      "description": "Boris lost 5 kg in two months simply by replacing his regular food with Cat Energy Slim. A great result without exhausting workouts! He has kept all his habits and still sleeps 16 hours a day.",
+      "metricHeading": "Metric",
+      "descriptionHeading": "Description",
+      "weightLoss": "Weight lost",
+      "timeTaken": "Time taken",
+      "foodCost": "Food costs",
+      "before": "Before",
+      "after": "After",
+      "beforeImageAlt": "Boris the cat before the diet",
+      "afterImageAlt": "Boris the cat after the diet",
+      "comparisonLabel": "Compare Boris before and after the diet"
+    }
+  },
+  "catalog": {
+    "title": "Product catalog",
+    "fields": {
+      "name": "Name",
+      "quantity": "Quantity",
+      "weight": "Weight",
+      "flavor": "Flavor",
+      "price": "Price"
+    },
+    "actions": {
+      "order": "Order"
+    },
+    "productLines": {
+      "slim": "Cat Energy Slim",
+      "pro": "Cat Energy Pro"
+    },
+    "flavors": {
+      "chicken": "Chicken",
+      "fish": "Fish",
+      "buckwheat": "Buckwheat",
+      "rice": "Rice"
+    },
+    "productImageAlt": "{{product}}, {{weight}} g, {{flavor}} flavor",
+    "more": {
+      "title": "See a gazillion more products",
+      "description": "There are actually many more flavors!",
+      "showAll": "Show all"
+    },
+    "extras": {
+      "title": "Additional products",
+      "items": {
+        "sweetener": "Sweetener",
+        "water": "Drinking water",
+        "milk": "Milk",
+        "vitamins": "Vitamins"
+      },
+      "onePack": "1 pack ({{grams}} g)",
+      "fiveLiters": "5 liters",
+      "oneLiter": "1 liter",
+      "bonus": "Order everything and get a cat cover as a gift!"
+    }
+  },
+  "program": {
+    "title": "Choose a program",
+    "intro": "Fill out the form and we will find a nutrition program for your cat.",
+    "cat": {
+      "legend": "Cat details",
+      "name": "Name",
+      "namePlaceholder": "Barsik",
+      "weight": "Weight (kg)",
+      "weightPlaceholder": "7",
+      "age": "Age (years)",
+      "agePlaceholder": "7"
+    },
+    "goal": {
+      "legend": "Goal",
+      "loseWeight": "Weight loss",
+      "gainWeight": "Weight gain",
+      "needAdvice": "Not sure (I would like your advice)"
+    },
+    "owner": {
+      "legend": "Cat owner’s contact details",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "phone": "Phone number",
+      "phonePlaceholder": "e.g. +1234567890"
+    },
+    "comment": {
+      "legend": "Owner’s comments",
+      "label": "Comments",
+      "placeholder": "Tell us about your cat’s habits and quirks"
+    },
+    "extras": {
+      "legend": "Extras"
+    },
+    "actions": {
+      "submit": "Submit application"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "catNameRequired": "Enter your cat’s name.",
+      "weightRequired": "Enter your cat’s weight.",
+      "weightInvalid": "Enter a valid weight.",
+      "weightPositive": "Weight must be greater than zero.",
+      "ageInvalid": "Enter a valid age.",
+      "ageNonNegative": "Age cannot be negative.",
+      "goalRequired": "Choose a goal.",
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter a valid email address.",
+      "phoneRequired": "Enter your phone number.",
+      "phoneInvalid": "Enter a valid phone number.",
+      "submitSuccess": "Your application has been submitted.",
+      "submitError": "The application could not be submitted. Please try again."
+    }
+  },
+  "footer": {
+    "dealers": "We welcome dealer partnerships!",
+    "address": {
+      "street": "19/8 Bolshaya Konyushennaya Street",
+      "city": "Saint Petersburg"
+    },
+    "mapLabel": "Map showing the Cat Energy address",
+    "social": {
+      "vk": "VKontakte",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "academyLinkLabel": "Visit HTML Academy’s adaptive web design and automation course"
   }
 }

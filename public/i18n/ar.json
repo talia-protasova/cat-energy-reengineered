@@ -1,4 +1,33 @@
 {
+  "common": {
+    "skipToMain": "تخطَّ إلى المحتوى الرئيسي",
+    "logoAlt": "شعار Cat Energy",
+    "requiredFieldsNote": "* — الحقول المطلوبة"
+  },
+  "seo": {
+    "home": {
+      "title": "Cat Energy — تغذية وظيفية للقطط",
+      "description": "تعرّف على برنامجي Cat Energy Slim وPro للتغذية وكيفية عمل الغذاء الوظيفي للقطط."
+    },
+    "catalog": {
+      "title": "كتالوج المنتجات — Cat Energy",
+      "description": "تصفّح منتجات Cat Energy Slim وPro ونكهاتها وأحجام عبواتها والمنتجات الإضافية."
+    },
+    "program": {
+      "title": "اختيار برنامج غذائي — Cat Energy",
+      "description": "أخبرنا عن قطتك لاختيار برنامج تغذية مناسب لها من Cat Energy."
+    }
+  },
+  "navigation": {
+    "label": "التنقل الرئيسي",
+    "home": "الرئيسية",
+    "catalog": "كتالوج المنتجات",
+    "program": "اختيار برنامج",
+    "menu": "القائمة",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "goHome": "الانتقال إلى الصفحة الرئيسية لـ Cat Energy"
+  },
   "theme": {
     "label": "تفضيلات المظهر",
     "light": "فاتح",
@@ -8,5 +37,156 @@
   },
   "language": {
     "label": "اللغة"
+  },
+  "home": {
+    "hero": {
+      "title": "تغذية وظيفية للقطط",
+      "subtitle": "تهتم بنفسك؟ اهتم بقطتك أيضًا!",
+      "cta": "اختيار برنامج",
+      "imageAlt": "طعام قطط Cat Energy بنكهة الدجاج"
+    },
+    "programs": {
+      "heading": "برامج التغذية",
+      "slim": {
+        "title": "إنقاص الوزن",
+        "description": "هل أصبحت قطتك أثقل من كلب، وبالكاد تستطيع تسلّق الأشجار؟ حان وقت الحمية! يساعد Cat Energy Slim قطتك على التخلص من الوزن الزائد.",
+        "catalogLink": "كتالوج Slim"
+      },
+      "pro": {
+        "title": "زيادة الوزن",
+        "description": "هل تريد أن تكتسب قطتك احترام قطط الحي، وحتى الكلاب؟ يساعد Cat Energy Pro قطتك على بناء العضلات التي تحتاجها!",
+        "catalogLink": "كتالوج Pro"
+      }
+    },
+    "benefits": {
+      "title": "كيف يعمل",
+      "nutrients": "تحتوي التغذية الوظيفية على عناصر غذائية مفيدة فقط.",
+      "preparation": "يأتي على هيئة مسحوق؛ ما عليك سوى إضافة الماء المغلي، ويصبح جاهزًا.",
+      "replacement": "استبدل وجبة أو وجبتين من الطعام المعتاد بغذائنا الوظيفي.",
+      "results": "لاحظ التغيّرات الإيجابية على قطتك بعد شهر واحد فقط."
+    },
+    "example": {
+      "title": "مثال واقعي",
+      "description": "فقد القط بوريس 5 كغ خلال شهرين بمجرد استبدال طعامه المعتاد بـ Cat Energy Slim. نتيجة رائعة من دون تمارين مرهقة! ولم يغيّر عاداته؛ فما زال ينام 16 ساعة يوميًا.",
+      "metricHeading": "المؤشرات",
+      "descriptionHeading": "الوصف",
+      "weightLoss": "الوزن المفقود",
+      "timeTaken": "المدة المستغرقة",
+      "foodCost": "تكلفة التغذية",
+      "before": "قبل",
+      "after": "بعد",
+      "beforeImageAlt": "القط بوريس قبل الحمية",
+      "afterImageAlt": "القط بوريس بعد الحمية",
+      "comparisonLabel": "مقارنة صورة بوريس قبل الحمية وبعدها"
+    }
+  },
+  "catalog": {
+    "title": "كتالوج المنتجات",
+    "fields": {
+      "name": "الاسم",
+      "quantity": "الكمية",
+      "weight": "الوزن",
+      "flavor": "النكهة",
+      "price": "السعر"
+    },
+    "actions": {
+      "order": "اطلب الآن"
+    },
+    "productLines": {
+      "slim": "Cat Energy Slim",
+      "pro": "Cat Energy Pro"
+    },
+    "flavors": {
+      "chicken": "الدجاج",
+      "fish": "السمك",
+      "buckwheat": "الحنطة السوداء",
+      "rice": "الأرز"
+    },
+    "productImageAlt": "طعام القطط {{product}} بوزن {{weight}} غرام، بنكهة {{flavor}}",
+    "more": {
+      "title": "اكتشف منتجات أخرى لا تُحصى",
+      "description": "هناك نكهات أكثر بكثير في الواقع!",
+      "showAll": "عرض الكل"
+    },
+    "extras": {
+      "title": "منتجات إضافية",
+      "items": {
+        "sweetener": "مُحلٍّ بديل للسكر",
+        "water": "مياه للشرب",
+        "milk": "حليب",
+        "vitamins": "فيتامينات"
+      },
+      "onePack": "عبوة واحدة ({{grams}} غرام)",
+      "fiveLiters": "5 لترات",
+      "oneLiter": "لتر واحد",
+      "bonus": "اطلب كل شيء واحصل على غطاء لقطتك هديةً!"
+    }
+  },
+  "program": {
+    "title": "اختيار برنامج",
+    "intro": "املأ الاستمارة وسنختار برنامج تغذية لقطتك.",
+    "cat": {
+      "legend": "بيانات القطة",
+      "name": "الاسم",
+      "namePlaceholder": "بارسيك",
+      "weight": "الوزن (كغ)",
+      "weightPlaceholder": "7",
+      "age": "العمر (بالسنوات)",
+      "agePlaceholder": "7"
+    },
+    "goal": {
+      "legend": "الهدف",
+      "loseWeight": "إنقاص الوزن",
+      "gainWeight": "زيادة الوزن",
+      "needAdvice": "لست متأكدًا (أحتاج إلى نصيحتكم)"
+    },
+    "owner": {
+      "legend": "بيانات الاتصال بصاحب القطة",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "name@example.com",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "مثال: +1234567890"
+    },
+    "comment": {
+      "legend": "ملاحظات صاحب القطة",
+      "label": "ملاحظات",
+      "placeholder": "أخبرنا عن عادات قطتك وطباعها"
+    },
+    "extras": {
+      "legend": "إضافات"
+    },
+    "actions": {
+      "submit": "إرسال الطلب"
+    },
+    "validation": {
+      "required": "هذا الحقل مطلوب.",
+      "catNameRequired": "أدخل اسم قطتك.",
+      "weightRequired": "أدخل وزن قطتك.",
+      "weightInvalid": "أدخل وزنًا صحيحًا.",
+      "weightPositive": "يجب أن يكون الوزن أكبر من صفر.",
+      "ageInvalid": "أدخل عمرًا صحيحًا.",
+      "ageNonNegative": "لا يمكن أن يكون العمر سالبًا.",
+      "goalRequired": "اختر هدفًا.",
+      "emailRequired": "أدخل بريدك الإلكتروني.",
+      "emailInvalid": "أدخل عنوان بريد إلكتروني صحيحًا.",
+      "phoneRequired": "أدخل رقم هاتفك.",
+      "phoneInvalid": "أدخل رقم هاتف صحيحًا.",
+      "submitSuccess": "تم إرسال طلبك.",
+      "submitError": "تعذّر إرسال الطلب. يُرجى المحاولة مرة أخرى."
+    }
+  },
+  "footer": {
+    "dealers": "نرحّب بالتعاون مع الموزّعين!",
+    "address": {
+      "street": "شارع بولشايا كونيوشينايا، مبنى 19/8",
+      "city": "سانت بطرسبرغ"
+    },
+    "mapLabel": "خريطة توضح عنوان Cat Energy",
+    "social": {
+      "vk": "فكونتاكتي",
+      "instagram": "إنستغرام",
+      "facebook": "فيسبوك"
+    },
+    "academyLinkLabel": "زيارة دورة HTML Academy عن تصميم الصفحات المتجاوبة والأتمتة"
   }
 }
