@@ -1,0 +1,12 @@
+{
+  "theme": {
+    "label": "Theme preference",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "active": "Active theme"
+  },
+  "language": {
+    "label": "Language"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "theme": {
+    "label": "Preferencia de tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Según el sistema",
+    "active": "Tema activo"
+  },
+  "language": {
+    "label": "Idioma"
+  }
+}

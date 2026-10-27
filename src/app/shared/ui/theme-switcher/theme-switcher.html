@@ -1,0 +1,29 @@
+<div class="theme-switcher">
+  <label for="theme-mode">
+    {{ 'theme.label' | transloco }}
+  </label>
+
+  <select
+    id="theme-mode"
+    #themeSelect
+    [value]="theme.preference()"
+    (change)="setTheme(themeSelect.value)"
+  >
+    <option value="system">
+      {{ 'theme.system' | transloco }}
+    </option>
+
+    <option value="light">
+      {{ 'theme.light' | transloco }}
+    </option>
+
+    <option value="dark">
+      {{ 'theme.dark' | transloco }}
+    </option>
+  </select>
+
+  <p aria-live="polite">
+    {{ 'theme.active' | transloco }}:
+    {{ 'theme.' + theme.resolvedTheme() | transloco }}
+  </p>
+</div>

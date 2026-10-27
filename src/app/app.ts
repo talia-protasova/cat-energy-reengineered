@@ -1,23 +1,14 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { ThemeService } from './core/theme/theme.service';
+import { LanguageSwitcher } from './shared/ui/language-switcher/language-switcher';
+import { ThemeSwitcher } from './shared/ui/theme-switcher/theme-switcher';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ThemeSwitcher, LanguageSwitcher],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class App {
-  protected readonly title = signal('cat-energy-reengineered');
-
-  readonly theme = inject(ThemeService);
-
-  setTheme(value: string): void {
-    if (value === 'light' || value === 'dark' || value === 'system') {
-      this.theme.setTheme(value);
-    }
-  }
-}
+export class App {}

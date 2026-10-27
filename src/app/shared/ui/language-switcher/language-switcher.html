@@ -1,0 +1,17 @@
+<div class="language-switcher">
+  <label for="language-select">
+    {{ 'language.label' | transloco }}
+  </label>
+
+  <select
+    id="language-select"
+    #languageSelect
+    [value]="language.activeLanguage()"
+    (change)="setLanguage(languageSelect.value)"
+  >
+    <option value="en" lang="en">English</option>
+    <option value="ru" lang="ru">Русский</option>
+    <option value="es" lang="es">Español</option>
+    <option value="ar" lang="ar" dir="rtl">العربية</option>
+  </select>
+</div>
